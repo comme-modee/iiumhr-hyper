@@ -4,6 +4,7 @@ import styles from '../style/Contact.module.css'
 import classNames from 'classnames';
 import { contactApi } from '@/common/api';
 import { useNotificationContext } from '@/common/context';
+import { motion } from 'framer-motion';
 
 const Contact = ({ type }) => {
     const isBusiness = type === 'business';
@@ -40,18 +41,44 @@ const Contact = ({ type }) => {
     return (
         <div className={classNames(styles.contact, commonStyles.flexCenter)}>
             <div className={commonStyles.layout}>
-                <div className={styles.title}>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.title}
+                >
                     {isBusiness ? '노무 업무에 관한 모든 것을 함께 합니다.' :
                         isEmployee ? '기본적인 권리! 스스로 지켜야 합니다.' :
                             '여러분의 최고의 파트너 노무법인 이음'}
-                </div>
-                <div className={styles.description}>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.description}
+                >
                     {isBusiness ? '대표님들께서는 오직 사업장의 성장에만 집중하시길 바랍니다.' :
                         isEmployee ? '세상에 당연한 것은 없습니다. 이음이 여러분과 함께합니다.' :
                             '어렵고 곤란한 문제들, 이음이 여러분과 함께하겠습니다.'}
-                </div>
-
-                <form onSubmit={inquiry}>
+                </motion.div>
+                <motion.form
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    onSubmit={inquiry}
+                >
                     <div className={styles.formRow}>
                         <input id='name' name='name' type='text' placeholder='성함' required />
                         <input id='tel' name='tel' type='tel' placeholder='전화번호' maxLength='11' required />
@@ -66,7 +93,7 @@ const Contact = ({ type }) => {
                         </label>
                         <p className={styles.privacyRightBtn}>개인정보 취급방침 전문</p>
                     </div>
-                </form>
+                </motion.form>
             </div>
         </div>
     )

@@ -34,7 +34,7 @@ const Logout = () => {
 					<h4 className="text-dark-50 text-center mt-0 fw-bold">
 						{t('로그아웃')}
 					</h4>
-					<p className="text-muted mb-4">{t('햇님달님에서 로그아웃 되었습니다.')}</p>
+					<p className="text-muted mb-4">{t('노무법인 이음에서 로그아웃 되었습니다.')}</p>
 
 					<div className="logout-icon m-auto">
 						<svg

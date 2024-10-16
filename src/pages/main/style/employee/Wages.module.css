@@ -482,6 +482,28 @@
 
 /* 태블릿 */
 
+@media screen and (max-width: 960px) {
+    .sec6 {
+        margin-bottom: 60px;
+        padding: 0px 20px;
+    }
+    .sec6 > .contentContainer {
+        height: auto;
+    }
+    .sec7 {
+        padding: 0px 20px;
+    }
+    .sec7 > .table1 > .row p,
+    .sec7 > .table2 > .row p {
+        padding: 12px 0;
+    }
+    .sec7 > .table1 > div:nth-child(2) > div > p:first-child {
+        left: 8px;
+    }
+    .sec7 > .table1 > div:nth-child(2) > div > p:last-child {
+        right: 8px;
+    }
+}
 @media screen and (max-width: 768px) {
     .sec1 {
         padding: 100px 20px;
@@ -544,16 +566,9 @@
         margin: 20px 0 60px 0;
     }
 
-    .sec6 {
-        margin-bottom: 60px;
-        padding: 0px 20px;
-    }
     .sec6 > .title {
         font-size: 1.6rem;
         margin-bottom: 20px;
-    }
-    .sec6 > .contentContainer {
-        height: 360px;
     }
     .sec6 > .contentContainer {
         gap: 10px;
@@ -594,12 +609,6 @@
     .sec7 > .table2 > .row p {
         font-size: 1.1rem;
         padding: 10px 0;
-    }
-    .sec7 > .table1 > div:nth-child(2) > div > p:first-child {
-        left: 8px;
-    }
-    .sec7 > .table1 > div:nth-child(2) > div > p:last-child {
-        right: 8px;
     }
     .sec7 > .table1 > div:nth-child(2) > div > span {
         transform: rotate(18deg) translate(7px, 38px);

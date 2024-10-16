@@ -143,6 +143,10 @@
     padding: 30px;
     font-size: 1.2rem;
 }
+.sec4 > div > .box > ul > li {
+    display: flex;
+    gap: 8px;
+}
 
 
 
@@ -288,5 +292,8 @@
         gap: 10px;
         width: 100%;
         padding: 30px 20px;
+    }
+    .sec4 > div > .box > ul > li {
+        gap: 4px;
     }
 }

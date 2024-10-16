@@ -411,7 +411,6 @@
 
     .sec4 > div > .careerContainer > div {
         flex-direction: column;
-        gap: 0px;
     }
     
     .sec5 > div > .profile > .info > p:first-child {

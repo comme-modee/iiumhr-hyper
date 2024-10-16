@@ -111,4 +111,10 @@
         flex-wrap: wrap;
         justify-content: center;
     }
+    .businessCategory::after {
+        content: '';
+        display: block;
+        width: calc(50% - 10px);
+        background: url('../assets/img/logo-y.png') no-repeat center/70%;
+    }
 }

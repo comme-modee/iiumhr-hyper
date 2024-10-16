@@ -4,6 +4,7 @@ import commonStyles from '../style/Common.module.css'
 import classNames from 'classnames'
 import profileImg1 from '../assets/img/intro003.png'
 import profileImg2 from '../assets/img/intro004.png'
+import { motion } from 'framer-motion';
 
 const Intro = () => {
     return (
@@ -16,7 +17,16 @@ const Intro = () => {
                     대표님들께서는 오직 사업장의 성장에만 집중하시길 바랍니다.
                 </p>
             </div>
-            <div className={classNames(styles.sec2, commonStyles.flexCenter)}>
+            <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                    ease: 'easeInOut',
+                    duration: 1
+                }}
+                className={classNames(styles.sec2, commonStyles.flexCenter)}
+            >
                 <p>
                     안녕하십니까?<br />
                     노무법인 이음을 찾아주셔서 진심으로 감사드립니다.
@@ -36,9 +46,18 @@ const Intro = () => {
                 <p>
                     감사합니다.
                 </p>
-            </div>
+            </motion.div>
             <div className={classNames(styles.sec3, commonStyles.flexCenter)}>
-                <div className={commonStyles.layout}>
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={commonStyles.layout}
+                >
                     <div className={styles.profile}>
                         <div className={styles.img}>
                             <img src={profileImg1} alt='' />
@@ -62,15 +81,33 @@ const Intro = () => {
                             </ul>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
             <div className={classNames(styles.sec4, commonStyles.flexCenter)}>
                 <div className={commonStyles.layout}>
-                    <div className={styles.title}>
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.title}
+                    >
                         <p>Ga Hee-jin Career</p>
                         <p>주요 커리어</p>
-                    </div>
-                    <div className={styles.careerContainer}>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.careerContainer}
+                    >
                         <p>
                             경기연구원 ｜ 경기중소기업종합지원센터 ｜ 그랜드코리아레저 ｜ 동국제약 ｜ 무림파워텍<br />
                             아주뉴스 ｜ 산업기술진흥원 ｜ 삼표기초소재 ｜ 서울연구원 ｜ 엘리시안 ｜ HR컨설팅
@@ -91,11 +128,20 @@ const Intro = () => {
                                 실태 및 개선방안 연구용역 등
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
             <div className={classNames(styles.sec5, commonStyles.flexCenter)}>
-                <div className={commonStyles.layout}>
+                <motion.div
+                    initial={{ opacity: 0, y: 50 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={commonStyles.layout}
+                >
                     <div className={styles.profile}>
                         <div className={styles.info}>
                             <p>파트너 공인노무사 <span>이 준 학</span></p>
@@ -118,15 +164,33 @@ const Intro = () => {
                             <img src={profileImg2} alt='' />
                         </div>
                     </div>
-                </div>
+                    </motion.div>
             </div>
             <div className={classNames(styles.sec6, commonStyles.flexCenter)}>
                 <div className={commonStyles.layout}>
-                    <div className={styles.title}>
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.title}
+                    >
                         <p>Lee Junhak Career</p>
                         <p>주요 커리어</p>
-                    </div>
-                    <div className={styles.careerContainer}>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 50 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.careerContainer}
+                    >
                         <div>
                             <p>
                                 쿠팡 ｜ 새마을금고 ｜ 코스콤 ｜ 튼튼영어<br />
@@ -145,7 +209,7 @@ const Intro = () => {
                                 노사분쟁 관련 업무 다수 수행 등
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>

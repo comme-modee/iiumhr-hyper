@@ -8,6 +8,7 @@ import sec4Img1 from '../../assets/img/business/hr005.png'
 import sec4Img2 from '../../assets/img/business/hr006.png'
 import sec4Img3 from '../../assets/img/business/hr007.png'
 import sec4Img4 from '../../assets/img/business/hr008.png'
+import { motion } from 'framer-motion';
 
 const HR = () => {
     return (
@@ -22,8 +23,28 @@ const HR = () => {
             </div>
             <Categorys url={'hr'} />
             <div className={classNames(styles.sec2, commonStyles.layout)}>
-                <p className={styles.title}>HR 컨설팅 서비스 <span>프로세스</span></p>
-                <div className={styles.process}>
+                <motion.p
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.title}
+                >
+                    HR 컨설팅 서비스 <span>프로세스</span>
+                </motion.p>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.process}
+                >
                     <div className={styles.box}>
                         <p>STEP 1</p>
                         <p>통합진단</p>
@@ -73,13 +94,43 @@ const HR = () => {
                             안정적으로 제도가 안착될 수 있도록 지원
                         </p>
                     </div>
-                </div>
-                <img src={sec2Img} alt='' />
+                </motion.div>
+                <motion.img
+                    initial={{ opacity: 0 }}
+                    whileInView={{ opacity: 1 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    src={sec2Img}
+                    alt=''
+                ></motion.img>
             </div>
             <div className={classNames(styles.sec3, commonStyles.flexCenter)}>
                 <div className={commonStyles.layout}>
-                    <p className={styles.title}>HR 컨설팅 서비스가 <span>필요한 업무 영역</span></p>
-                    <div className={styles.contentContainer}>
+                    <motion.p
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.title}
+                    >
+                        HR 컨설팅 서비스가 <span>필요한 업무 영역</span>
+                    </motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.contentContainer}
+                    >
                         <div className={styles.row}>
                             <p>임금체계 개편</p>
                             <p>평가보상제도 설계</p>
@@ -99,13 +150,33 @@ const HR = () => {
                                 <div className={styles.img}></div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
             <div className={classNames(styles.sec4, commonStyles.flexCenter)}>
                 <div className={commonStyles.layout}>
-                    <p className={styles.title}>HR 컨설팅 서비스의 <span>기대효과</span></p>
-                    <div className={styles.boxContainer}>
+                    <motion.p
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.title}
+                    >
+                        HR 컨설팅 서비스의 <span>기대효과</span>
+                    </motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.boxContainer}
+                    >
                         <div>
                             <p>01</p>
                             <p>
@@ -142,7 +213,7 @@ const HR = () => {
                             </p>
                             <img src={sec4Img4} alt='' />
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>

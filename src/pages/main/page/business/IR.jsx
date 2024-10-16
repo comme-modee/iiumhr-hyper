@@ -4,6 +4,7 @@ import commonStyles from '../../style/Common.module.css'
 import classNames from 'classnames'
 import Categorys from '../../component/Categorys'
 import img from '../../assets/img/business/ir002.png'
+import { motion } from 'framer-motion';
 
 const IR = () => {
     return (
@@ -19,8 +20,28 @@ const IR = () => {
             <Categorys url={'ir'} />
             <div className={classNames(styles.sec2, commonStyles.flexCenter)}>
                 <div className={commonStyles.layout}>
-                    <p className={styles.title}>IR 컨설팅 서비스가 <span>필요한 업무 영역</span></p>
-                    <div className={styles.boxContainer}>
+                    <motion.p
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.title}
+                    >
+                        IR 컨설팅 서비스가 <span>필요한 업무 영역</span>
+                    </motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.boxContainer}
+                    >
                         <div className={styles.box}>
                             <p>노사 관계 진단 및 전략 수립</p>
                             <p>
@@ -51,21 +72,53 @@ const IR = () => {
                                 기타 단체교섭 체결 과정 지원
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
             <div className={classNames(styles.sec3, commonStyles.flexCenter)}>
                 <div className={commonStyles.layout}>
-                    <p className={styles.title}>IR 컨설팅 서비스의 <span>기대효과</span></p>
-                    <div className={styles.box}>
+                    <motion.p
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.title}
+                    >
+                        IR 컨설팅 서비스의 <span>기대효과</span>
+                    </motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.box}
+                    >
                         <img src={img} alt='' />
                         <ul>
-                            <li>① 노사 관계 <span>안정화</span></li>
-                            <li>② <span>협력적</span> 노사 관계 및 <span>합리적</span> 노사 관행 구축</li>
-                            <li>③ 근로자들의 <span>생산성 향상</span></li>
-                            <li>④ 대외적 <span>기업 이미지 제고</span></li>
+                            <li>
+                                <div>①</div>
+                                <div>노사 관계 <span>안정화</span></div>
+                            </li>
+                            <li>
+                                <div>②</div>
+                                <div><span>협력적</span> 노사 관계 및 <span>합리적</span> 노사 관행 구축</div>
+                            </li>
+                            <li>
+                                <div>③</div>
+                                <div>근로자들의 <span>생산성 향상</span></div>
+                            </li>
+                            <li>
+                                <div>④</div>
+                                <div>대외적 <span>기업 이미지 제고</span></div>
+                            </li>
                         </ul>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>

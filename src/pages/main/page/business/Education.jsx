@@ -9,7 +9,7 @@ import icon3 from '../../assets/img/business/edu007.png'
 import icon4 from '../../assets/img/business/edu008.png'
 import icon5 from '../../assets/img/business/edu009.png'
 import icon6 from '../../assets/img/business/edu010.png'
-
+import { motion } from 'framer-motion';
 
 const Education = () => {
     return (
@@ -24,8 +24,28 @@ const Education = () => {
             </div>
             <Categorys url={'edu'} />
             <div className={classNames(styles.sec2, commonStyles.layout)}>
-                <p className={styles.title}>노무 강의 및 교육 서비스 <span>프로세스</span></p>
-                <div className={styles.process}>
+                <motion.p
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.title}
+                >
+                    노무 강의 및 교육 서비스 <span>프로세스</span>
+                </motion.p>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.process}
+                >
                     <div className={styles.box}>
                         <p>01</p>
                         <p>교육 목표 및 커리큘럼 수립</p>
@@ -58,13 +78,42 @@ const Education = () => {
                             이를 대상으로 실무형 교육을 진행
                         </p>
                     </div>
-                </div>
+                </motion.div>
             </div>
-            <div className={styles.sec3}></div>
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                    ease: 'easeInOut',
+                    duration: 1
+                }}
+                className={styles.sec3}
+            ></motion.div>
             <div className={classNames(styles.sec4, commonStyles.flexCenter)}>
                 <div className={commonStyles.layout}>
-                    <p className={styles.title}>노무 강의 및 교육 서비스 <span>주요 내용</span></p>
-                    <div className={styles.contentContainer}>
+                    <motion.p
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.title}
+                    >
+                        노무 강의 및 교육 서비스 <span>주요 내용</span>
+                    </motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.contentContainer}
+                    >
                         <div className={styles.content}>
                             <img src={icon1} alt='' width={80} />
                             <p>
@@ -107,13 +156,33 @@ const Education = () => {
                                 예방 교육
                             </p>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
             <div className={classNames(styles.sec5, commonStyles.flexCenter)}>
                 <div className={commonStyles.layout}>
-                    <p className={styles.title}>노무 강의 및 교육 서비스의 <span>기대효과</span></p>
-                    <div className={styles.boxContainer}>
+                    <motion.p
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.title}
+                    >
+                        노무 강의 및 교육 서비스의 <span>기대효과</span>
+                    </motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.boxContainer}
+                    >
                         <div>
                             노무 관리에 대한<br />
                             기업의 역량 제고
@@ -126,7 +195,7 @@ const Education = () => {
                             노동 이슈 전반에 걸친<br />
                             높은 이해도
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>

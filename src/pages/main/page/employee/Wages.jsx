@@ -6,6 +6,7 @@ import Categorys from '../../component/Categorys'
 import sec6Icon1 from '../../assets/img/employee/wages004.png'
 import sec6Icon2 from '../../assets/img/employee/wages005.png'
 import sec6Icon3 from '../../assets/img/employee/wages006.png'
+import { motion } from 'framer-motion';
 
 const Wages = () => {
     return (
@@ -20,21 +21,70 @@ const Wages = () => {
             </div>
             <Categorys url={'wages'} />
             <div className={styles.sec2}>
-                <p className={styles.title}><span>임금체불</span>이란?</p>
-                <p className={styles.description}>
+                <motion.p
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.title}
+                >
+                    <span>임금체불</span>이란?
+                </motion.p>
+                <motion.p
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.description}
+                >
                     임금을 지급 받지 못한 근로자는 밀린 임금을 지급 받을 수 있도록 해달라고<br />
                     요구(진정)하거나, 사용자를 근로기준법 위반으로 처벌해 달라고 요구(고소)할 수 있습니다.
-                </p>
+                </motion.p>
             </div>
-            <div className={classNames(styles.sec3, commonStyles.flexCenter)}>
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                    ease: 'easeInOut',
+                    duration: 1
+                }}
+                className={classNames(styles.sec3, commonStyles.flexCenter)}
+            >
                 <p>
                     노무법인 이음이 여러분 곁에 서서<br />
                     함께 헤쳐 나가겠습니다.
                 </p>
-            </div>
+            </motion.div>
             <div className={classNames(styles.sec4, commonStyles.flexCenter)}>
-                <p className={styles.title}>임금체불 사건 처리 절차</p>
-                <div className={commonStyles.layout}>
+                <motion.p
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.title}
+                >
+                    임금체불 사건 처리 절차
+                </motion.p>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={commonStyles.layout}
+                >
                     <div className={styles.graph}>
                         <div className={styles.type1}>
                             <div className={styles.line}></div>
@@ -58,22 +108,58 @@ const Wages = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
             <div className={classNames(styles.sec5, commonStyles.layout)}>
-                <p className={styles.title}>
+                <motion.p
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.title}
+                >
                     <span>대지급금 제도</span>란?
-                </p>
-                <div className={styles.description}>
+                </motion.p>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.description}
+                >
                     기업의 도산 등으로 인하여 사업을 계속하는 것이 불가능하거나 기업의 경영이 불안정하여,<br />
                     임금 등을 지급받지 못하고 퇴직한 근로자에게 그 지급을 보장하는 제도
-                </div>
+                </motion.div>
             </div>
             <div className={classNames(styles.sec6, commonStyles.layout)}>
-                <p className={styles.title}>
+                <motion.p
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.title}
+                >
                     체당금 <span>지급 사유</span> (기업의 도산)
-                </p>
-                <div className={styles.contentContainer}>
+                </motion.p>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.contentContainer}
+                >
                     <div className={styles.content}>
                         <div>
                             <div className={styles.icon}>
@@ -112,13 +198,31 @@ const Wages = () => {
                         </div>
                     </div>
                     <div className={styles.img}></div>
-                </div>
+                </motion.div>
             </div>
             <div className={classNames(styles.sec7, commonStyles.layout)}>
-                <p className={styles.title}>
+                <motion.p
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.title}
+                >
                     체당금 <span>월정상한액 [24년 기준]</span>
-                </p>
-                <div className={styles.table1}>
+                </motion.p>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.table1}
+                >
                     <div className={styles.header}>
                         <div>
                             <p>(도산대지급금) 구.일반체당금</p>
@@ -166,8 +270,17 @@ const Wages = () => {
                         <p>출산후 휴가기간 중 급여</p>
                         <p>310</p>
                     </div>
-                </div>
-                <div className={styles.table2}>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.table2}
+                >
                     <div className={styles.header}>
                         <div>
                             <p>(간이대지급금) 구.소액체당금</p>
@@ -188,7 +301,7 @@ const Wages = () => {
                         <p>700</p>
                     </div>
                     <div>* 총 상한액은 1,000만 원</div>
-                </div>
+                </motion.div>
             </div>
         </div>
     )

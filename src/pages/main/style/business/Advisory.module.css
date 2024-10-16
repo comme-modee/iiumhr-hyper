@@ -51,17 +51,21 @@
 .sec2 > div > .content > ul > li {
     color: var(--gray02);
     font-size: 1.3rem;
+    display: flex;
+    gap: 8px;
+    word-break: keep-all;
 }
 .sec2 > div:nth-child(1) > .content > ul > li {
     text-align: left;
+    justify-content: start;
 }
 .sec2 > div:nth-child(2) > .content > ul > li {
     text-align: right;
+    justify-content: end;
 }
 .sec2 > div:nth-child(2) > .content > ul > li > span {
     color: var(--yellow)
 }
-
 
 
 
@@ -148,6 +152,7 @@
     }
     .sec2 > div > .content > ul > li {
         font-size: 1rem;
-        word-break: keep-all;
+        /* word-break: keep-all; */
+        gap: 4px;
     }
 }

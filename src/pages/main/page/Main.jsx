@@ -15,7 +15,6 @@ const Main = () => {
 
     useEffect(() => {
         setVh();
-        console.log('Made with fullPage.js');
     }, [])
 
     window.addEventListener('resize', () => {

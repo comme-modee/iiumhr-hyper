@@ -25,7 +25,6 @@ const AppLayout = ({ children }) => {
         });
     };
 
-
     window.addEventListener('resize', () => {
         if (window.innerWidth <= 768) {
             setIsTablet(true)
@@ -51,7 +50,7 @@ const AppLayout = ({ children }) => {
     }, [isMainPath, isTablet, isIntroPath, isBusinessPath, isEmployeePath, isFullPagePath]);
 
     return (
-        (isMainPath || isIntroPath || isBusinessPath || isEmployeePath || isFullPagePath)
+        (isMainPath || isIntroPath || isBusinessPath || isEmployeePath)
         ?
         <div className={commonStyles.textCenter}>
             <Header type={isMainPath && 'main'} />
@@ -65,6 +64,13 @@ const AppLayout = ({ children }) => {
                 </>
             }
             <Footer type={isMainPath && 'main'} />
+        </div>
+        :
+        isFullPagePath
+        ?
+        <div className={commonStyles.textCenter}>
+            <Header type={isMainPath && 'main'} />
+            {children}
         </div>
         :
         <React.Fragment>

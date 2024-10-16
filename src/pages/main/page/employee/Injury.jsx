@@ -10,6 +10,7 @@ import sec3Icon4 from '../../assets/img/employee/injury006.png'
 import sec3Icon5 from '../../assets/img/employee/injury007.png'
 import sec3Icon6 from '../../assets/img/employee/injury008.png'
 import sec3Icon7 from '../../assets/img/employee/injury009.png'
+import { motion } from 'framer-motion';
 
 const Injury = () => {
     return (
@@ -25,9 +26,27 @@ const Injury = () => {
             <Categorys url='injury' />
             <div className={classNames(styles.sec2, commonStyles.layout)}>
                 <div className={styles.contentContainer}>
-                    <div className={styles.img}></div>
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        whileInView={{ opacity: 1 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1,
+                            delay: 0.5
+                        }}
+                        className={styles.img}
+                    ></motion.div>
                     <div className={styles.text}>
-                        <div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{
+                                ease: 'easeInOut',
+                                duration: 1
+                            }}
+                        >
                             <p className={styles.title}>
                                 <span>산업 재해 사건</span>이란?
                             </p>
@@ -36,8 +55,16 @@ const Injury = () => {
                                 <p>사망하면 업무상 재해로 봅니다. 업무상 재해를 당한 근로자가</p>
                                 <p>일정한 요건을 갖추면 요양급여 등 보험급여를 받을 수 있습니다.</p>
                             </div>
-                        </div>
-                        <div>
+                        </motion.div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{
+                                ease: 'easeInOut',
+                                duration: 1
+                            }}
+                        >
                             <p className={styles.title}>
                                 산업 재해 사건 <span>적용 범위</span>
                             </p>
@@ -47,14 +74,34 @@ const Injury = () => {
                                 <p>모든 근로자에게 적용됩니다.</p>
                                 <p>(단, 개별 법령에서 별도로 재해보상을 행하거나 일부 업종의 경우에는 적용 제외)</p>
                             </div>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
             </div>
             <div className={classNames(styles.sec3, commonStyles.flexCenter)}>
                 <div className={commonStyles.layout}>
-                    <p className={styles.title}>주요 산업 재해 <span>보상 보험 급여 종류</span></p>
-                    <div className={styles.typeContainer}>
+                    <motion.p
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.title}
+                    >
+                        주요 산업 재해 <span>보상 보험 급여 종류</span>
+                    </motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.typeContainer}
+                    >
                         <div className={styles.type}>
                             <img src={sec3Icon1} alt='요양 급여 아이콘' />
                             <p>요양 급여</p>
@@ -83,14 +130,32 @@ const Injury = () => {
                             <img src={sec3Icon7} alt='장의비 아이콘' />
                             <p>장의비</p>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
             <div className={classNames(styles.sec4, commonStyles.layout)}>
-                <div className={styles.title}>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.title}
+                >
                     산업 재해 사건 <span>적용 범위</span>
-                </div>
-                <div className={styles.graph}>
+                </motion.div>
+                <motion.div
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{
+                        ease: 'easeInOut',
+                        duration: 1
+                    }}
+                    className={styles.graph}
+                >
                     <div>
                         <p className={styles.vLine}>사업현장</p>
                         <div className={styles.smallText}>
@@ -122,7 +187,7 @@ const Injury = () => {
                         <div className={styles.grayText}>취업홍보 제공 등 직업상담</div>
                     </div>
                     <p className={styles.yellow}>사회복귀</p>
-                </div>
+                </motion.div>
             </div>
         </div>
     )

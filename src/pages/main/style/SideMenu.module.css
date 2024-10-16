@@ -39,12 +39,17 @@
     font-size: 1.2rem;
     font-family: var(--font-L);
     cursor: pointer;
+    transition: all 0.3s ease-out;
 }
 .menu > img {
     position: absolute;
     bottom: 0;
     right: 5%;
     width: 70%;
+}
+.menuContainer li a:hover {
+    color: var(--blue);
+    font-family: var(--font-M);
 }
 
 

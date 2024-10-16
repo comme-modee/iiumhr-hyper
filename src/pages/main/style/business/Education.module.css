@@ -194,12 +194,16 @@
     gap: 30px;
 }
 .sec5 > div > .boxContainer > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     background-color: var(--blue);
     font-family: var(--font-B);
     font-size: 1.3rem;
     border-radius: 20px;
-    padding: 34px 0px;
+    padding: 34px 10px;
+    word-break: keep-all;
 }
 
 

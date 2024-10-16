@@ -137,7 +137,7 @@
 
 
 .sec4 {
-    padding: 100px 0px;
+    padding: 100px 20px;
 }
 .sec4 > div > .title {
     color: var(--black);
@@ -342,6 +342,9 @@
     }
 
     
+    .sec4 {
+        padding: 60px 10px 40px 10px;
+    }
     .sec4 > div > .title {
         font-size: 7vw;
     }

@@ -6,6 +6,7 @@ import Categorys from '../../component/Categorys'
 import sec2Img1 from '../../assets/img/employee/dismissal002.png'
 import sec2Img2 from '../../assets/img/employee/dismissal003.png'
 import sec2Img3 from '../../assets/img/employee/dismissal004.png'
+import { motion } from 'framer-motion';
 
 const Dismissal = () => {
     return (
@@ -21,14 +22,32 @@ const Dismissal = () => {
             <Categorys url='dismissal' />
             <div className={classNames(styles.sec2, commonStyles.layout)}>
                 <div className={styles.boxContainer}>
-                    <div className={styles.box}>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.box}
+                    >
                         <p><span>부당해고/징계</span> 사건이란?</p>
                         <p>
                             사용자로부터 정당한 이유 없이 해고, 휴직, 정직, 전직, 감봉, 기타 징벌을 당한 근로자는<br />
                             관할 지방 노동 위원회에 부당해고 등의 구제 신청을 할 수 있습니다.
                         </p>
-                    </div>
-                    <div className={styles.row}>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.row}
+                    >
                         <div className={styles.interview}>
                             <img src={sec2Img1} alt='' />
                             <p>
@@ -45,8 +64,17 @@ const Dismissal = () => {
                                 <span>”</span>
                             </p>
                         </div>
-                    </div>
-                    <div className={styles.box}>
+                    </motion.div>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.box}
+                    >
                         <div className={styles.img}><img src={sec2Img3} alt='' /></div>
                         <div>
                             <p>부당해고/징계 <span>사건 대상</span></p>
@@ -59,16 +87,45 @@ const Dismissal = () => {
                                 <li>⑥ 해고할 수 없는 시기에 해고를 한 경우</li>
                             </ul>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
-            <div className={classNames(styles.sec3, commonStyles.flexCenter)}>
+            <motion.div
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                viewport={{ once: true }}
+                transition={{
+                    ease: 'easeInOut',
+                    duration: 1
+                }}
+                className={classNames(styles.sec3, commonStyles.flexCenter)}
+            >
                 기본적인 권리, 노무법인 이음이 함께 지켜드립니다.
-            </div>
+            </motion.div>
             <div className={classNames(styles.sec4, commonStyles.flexCenter)}>
                 <div className={commonStyles.layout}>
-                    <p className={styles.title}>부당해고 <span>구제 신청 처리 절차</span></p>
-                    <div className={styles.graph}>
+                    <motion.p
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.title}
+                    >
+                        부당해고 <span>구제 신청 처리 절차</span>
+                    </motion.p>
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{
+                            ease: 'easeInOut',
+                            duration: 1
+                        }}
+                        className={styles.graph}
+                    >
                         <div className={styles.step1}>
                             <p>부당해고</p>
                             <p>지방노동위원회구제신청</p>
@@ -98,7 +155,7 @@ const Dismissal = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </div>
