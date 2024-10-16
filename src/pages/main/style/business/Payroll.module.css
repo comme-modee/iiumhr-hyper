@@ -1,0 +1,292 @@
+.sec1 {
+    word-break: keep-all;
+    padding: 180px 20px;
+    background: url('../../assets/img/business/payroll001.png') no-repeat center/cover;
+}
+.sec1 > .title {
+    font-family: var(--font-B);
+    font-size: 2.4rem;
+    padding-bottom: 16px;
+}
+.sec1 > .title > span {
+    color: var(--yellow)
+}
+.sec1 > .description {
+    font-family: var(--font-R);
+    font-size: 1.8rem;
+}
+
+
+
+.sec2 {
+    padding-bottom: 60px;
+}
+.sec2 > .title {
+    font-family: var(--font-B);
+    font-size: 2rem;
+    padding: 40px 0px 16px 0px;
+    color: var(--black);
+}
+.sec2 > .title > span {
+    color: var(--yellow)
+}
+.sec2 > .description {
+    font-size: 1.3rem;
+    color: var(--gray02);
+}
+.sec2 > img {
+    width: 100%;
+}
+
+
+
+.sec3 {
+    position: relative;
+    padding: 100px 20px;
+    background-color: var(--blue);
+}
+.sec3::before {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background-color: var(--blue);
+}
+.sec3 > div > .title {
+    font-family: var(--font-B);
+    font-size: 2rem;
+    padding-bottom: 50px;
+}
+.sec3 > div > .title > span {
+    color: var(--yellow);
+}
+.sec3 > div > .process {
+    display: flex;
+    gap: 30px;
+}
+.sec3 > div > .process > .box {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    font-family: var(--font-R);
+    font-size: 1.2rem;
+}
+.sec3 > div > .process > .box::after {
+    position: absolute;
+    content: '';
+    display: block;
+    top: 32%;
+    right: -24px;
+    width: 0px;
+    height: 0px;
+    border-left: 16px solid var(--white);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+.sec3 > div > .process > .box:last-child::after {
+    display: none;
+}
+.sec3 > div > .process > .box > p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sec3 > div > .process > .box > p:nth-child(1) {
+    height: 75%;
+    background-color: rgba(256, 256, 256, 0.1);
+}
+.sec3 > div > .process > .box > p:nth-child(2) {
+    height: 25%;
+    background-color: var(--yellow);
+}
+.sec3 > div > .process > .box:nth-of-type(odd) > p:nth-child(2) {
+    background-color: #c9c9c9;
+}
+
+
+
+.sec4 {
+    padding: 120px 0px;
+}
+.sec4 > div > .title {
+    color: var(--black);
+    font-family: var(--font-B);
+    font-size: 2rem;
+    padding-bottom: 50px;
+}
+.sec4 span {
+    color: var(--yellow)
+}
+.sec4 > div > .box {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 370px;
+}
+.sec4 > div > .box > img {
+    width: 58%;
+    height: 100%;
+    object-fit: cover;
+}
+.sec4 > div > .box > ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    text-align: left;
+    width: 42%;
+    height: 85%;
+    background-color: var(--blue);
+    padding: 30px;
+    font-size: 1.2rem;
+}
+
+
+
+
+/* 태블릿 */
+
+@media screen and (max-width: 960px) {
+    .sec4 > div > .box > img {
+        width: 50%;
+    }
+    .sec4 > div > .box > ul {
+        width: 50%;
+        height: 87%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sec1 {
+        padding: 100px 20px;
+    }
+    .sec1 > .title {
+        font-size: 1.6rem;
+    }
+    .sec1 > .description {
+        font-size: 1rem;
+    }
+
+    .sec2 {
+        padding-bottom: 40px;
+    }
+    .sec2 > .title {
+        font-size: 1.6rem;
+        padding: 30px 0px 10px 0px;
+    }
+    .sec2 > .description {
+        font-size: 1rem;
+    }
+
+    .sec3 {
+        padding: 60px 20px;
+    }
+    .sec3::before {
+        bottom: -30px;
+        width: 60px;
+        height: 60px;
+    }
+    .sec3 > div > .title {
+        font-size: 1.6rem;
+        padding-bottom: 30px;
+    }
+    .sec3 > div > .process > .box {
+        height: 150px;
+        font-size: 1rem;
+    }
+
+    .sec4 {
+        padding: 80px 0px;
+    }
+    .sec4 > div > .title {
+        font-size: 1.6rem;
+        padding-bottom: 20px;
+    }
+    .sec4 > div > .box > ul {
+        gap: 6px;
+    }
+}
+
+
+
+
+/* 모바일 */
+
+@media screen and (max-width: 480px) {
+    .sec1 {
+        padding: 80px 20px;
+    }
+    .sec1 > .title {
+        font-size: 7vw;
+    }
+    .sec1 > .description {
+        font-size: 4vw;
+    }
+
+    .sec2 > img {
+        height: 150px;
+        object-fit: cover;
+    }
+    .sec2 > .title {
+        font-size: 7vw;
+        padding: 20px 0px 10px 0px;
+    }
+    .sec2 > .description {
+        font-size: 1rem;
+        padding: 0px 20px;
+        word-break: keep-all;
+    }
+    .sec2 > img {
+        width: 100%;
+    }
+
+    .sec3 > div > .title {
+        font-size: 7vw;
+    }
+    .sec3 > div > .process {
+        flex-direction: column;
+    }
+    .sec3 > div > .process > .box {
+        height: 130px;
+        font-size: 1rem;
+    }
+    .sec3 > div > .process > .box::after {
+        top: initial;
+        bottom: -24px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0px;
+        height: 0px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 16px solid var(--white);
+        border-bottom: initial;
+    }
+
+    .sec4 {
+        height: auto;
+        padding: 60px 0px 0px 0px;
+    }
+    .sec4 > div > .title {
+        font-size: 7vw;
+        padding-bottom: 0px;
+        transform: translateY(28px);
+    }
+    .sec4 > div > .box {
+        height: auto;
+        flex-direction: column;
+    }
+    .sec4 > div > .box > img {
+        width: 100%;
+        clip-path: polygon(0% 10%, 100% 10%, 100% 90%, 0% 90%);
+        transform: translateY(28px);
+    }
+    .sec4 > div > .box > ul {
+        gap: 10px;
+        width: 100%;
+        padding: 30px 20px;
+    }
+}

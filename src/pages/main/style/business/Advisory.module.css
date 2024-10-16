@@ -1,0 +1,153 @@
+.sec1 {
+    word-break: keep-all;
+    padding: 180px 20px;
+    background: url('../../assets/img/business/advisory001.png') no-repeat center/cover;
+}
+.sec1 > .title {
+    font-family: var(--font-B);
+    font-size: 2.4rem;
+    padding-bottom: 16px;
+}
+.sec1 > .title > span {
+    color: var(--yellow)
+}
+.sec1 > .description {
+    font-family: var(--font-R);
+    font-size: 1.8rem;
+}
+
+
+.sec2 {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    padding-bottom: 150px;
+}
+.sec2 > div {
+    display: flex;
+    gap: 30px;
+    height: 250px;
+}
+.sec2 > div > img {
+    object-fit: cover;
+}
+.sec2 > div > .content {
+    width: 100%;
+    height: 100%;
+}
+.sec2 > div > .content > p {
+    font-family: var(--font-B);
+    font-size: 1.6rem;
+    padding: 10px 0;
+    background-color: #122b43;
+    margin-bottom: 16px;
+}
+.sec2 > div > .content > ul {
+    height: calc(100% - 74px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sec2 > div > .content > ul > li {
+    color: var(--gray02);
+    font-size: 1.3rem;
+}
+.sec2 > div:nth-child(1) > .content > ul > li {
+    text-align: left;
+}
+.sec2 > div:nth-child(2) > .content > ul > li {
+    text-align: right;
+}
+.sec2 > div:nth-child(2) > .content > ul > li > span {
+    color: var(--yellow)
+}
+
+
+
+
+/* 태블릿 */
+
+@media screen and (max-width: 960px) {
+    
+    .sec2 > div {
+        gap: 20px;
+    }
+    .sec2 > div > img {
+        width: 50%;
+    }
+    .sec2 > div > .content > p {
+        font-size: 1.2rem;
+    }
+    .sec2 > div > .content > ul {
+        justify-content: space-evenly;
+    }
+    .sec2 > div > .content > ul > li {
+        font-size: 1.1rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .sec1 {
+        padding: 100px 20px;
+    }
+    .sec1 > .title {
+        font-size: 1.6rem;
+    }
+    .sec1 > .description {
+        font-size: 1rem;
+    }
+
+    .sec2 {
+        padding-bottom: 40px;
+        gap: 30px;
+    }
+    .sec2 > div {
+        flex-direction: column;
+        height: auto;
+        gap: 0;
+    }
+    .sec2 > div > img {
+        width: 100%;
+        height: 250px;
+        object-position: top;
+    }
+    .sec2 > div > .content > ul {
+        padding: 0px 20px;
+        gap: 6px;
+    }
+    .sec2 > div:nth-child(2) {
+        flex-direction: column-reverse;
+    }
+}
+
+
+
+
+/* 모바일 */
+
+@media screen and (max-width: 480px) {
+    .sec1 {
+        padding: 80px 20px;
+    }
+    .sec1 > .title {
+        font-size: 7vw;
+    }
+    .sec1 > .description {
+        font-size: 4vw;
+    }
+
+    .sec2 {
+        padding: 0px 0px 20px 0px;
+    }
+    .sec2 > div > img {
+        height: 180px;
+    }
+    .sec2 > div > .content > p {
+        font-size: 1.2rem;
+    }
+    .sec2 > div > .content > ul > li {
+        font-size: 1rem;
+        word-break: keep-all;
+    }
+}

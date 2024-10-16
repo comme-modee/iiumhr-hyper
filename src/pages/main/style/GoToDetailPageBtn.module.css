@@ -1,0 +1,30 @@
+.btn a { 
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--yellow); 
+    color: var(--white); 
+    font-family: var(--font-L);
+    padding: 4px 14px;
+    cursor: pointer;
+}
+
+
+/* 모바일 */
+
+@media screen and (max-width: 480px) {
+    .btn a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 30px;
+        height: 100%;
+        padding: 0px;
+    }
+    .btn a > p {
+        display: none;
+    }
+}

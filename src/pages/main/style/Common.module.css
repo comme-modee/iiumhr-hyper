@@ -1,0 +1,22 @@
+/* fonts */
+.fontB { font-family: var(--font-B); }
+.fontM { font-family: var(--font-M); }
+.fontR { font-family: var(--font-R); }
+.fontL { font-family: var(--font-L); }
+
+.flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.layout {
+    width: 100%;
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+.textCenter {
+    text-align: center;
+}

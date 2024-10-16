@@ -1,0 +1,52 @@
+.mapContainer {
+    background-color: var(--blue);
+    display: flex;
+    height: 600px;
+}
+.mapContainer > .map {
+    width: 50%;
+    background-color: #fff;
+}
+.mapContainer > .info {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 60px;
+    gap: 30px;
+    text-align: left;
+}
+.mapContainer > .info > div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.mapContainer > .info > div > .icon {
+    width: 34px;
+    height: 34px;
+    background-color: var(--yellow);
+    border-radius: 50%;
+}
+.mapContainer > .info > div:nth-child(1) > .icon { background: url('../assets/img/map-icon-1.png') no-repeat center/contain; }
+.mapContainer > .info > div:nth-child(2) > .icon { background: url('../assets/img/map-icon-2.png') no-repeat center/contain; }
+.mapContainer > .info > div:nth-child(3) > .icon { background: url('../assets/img/map-icon-3.png') no-repeat center/contain; }
+
+
+
+
+/* 태블릿 */
+
+@media screen and (max-width: 768px) {
+    .mapContainer {
+        flex-direction: column;
+    }
+    .mapContainer > .map {
+        width: 100%;
+        height: 50%;
+    }
+    .mapContainer > .info {
+        width: 100%;
+        height: 50%;
+        padding: 20px;
+    }
+}

@@ -1,0 +1,335 @@
+.sec1 {
+    word-break: keep-all;
+    padding: 180px 20px;
+    background: url('../../assets/img/employee/harassment001.png') no-repeat center/cover;
+}
+.sec1 > .title {
+    font-family: var(--font-B);
+    font-size: 2.4rem;
+    padding-bottom: 10px;
+}
+.sec1 > .title > span {
+    color: var(--yellow);
+}
+.sec1 > .description {
+    font-family: var(--font-R);
+    font-size: 1.8rem;
+}
+
+
+
+
+.sec2 > .contentContainer {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    height: 460px;
+    margin-bottom: 120px;
+}
+.sec2 > .contentContainer > .img {
+    width: 50%;
+    height: 100%;
+    background: url('../../assets/img/employee/harassment002.png') no-repeat center/cover;
+}
+.sec2 > .contentContainer > .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    color: var(--black);
+    text-align: left;
+}
+.sec2 > .contentContainer > .text > div > .title {
+    font-family: var(--font-B);
+    font-size: 1.8rem;
+    padding-bottom: 20px;
+}
+.sec2 > .contentContainer > .text > div > .title > span {
+    color: var(--yellow);
+}
+.sec2 > .contentContainer > .text > div > .description {
+    font-family: var(--font-R);
+    font-size: 1.3rem;
+}
+
+
+
+
+.sec3 {
+    position: relative;
+    background-color: #e6e6e6;
+    padding: 110px 0px;
+}
+.sec3::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: var(--yellow);
+    clip-path: polygon(74% 0, 100% 0, 100% 100%, 52% 100%);
+}
+.sec3 > .contentContainer {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    height: 400px;
+}
+.sec3 > .contentContainer > .img {
+    width: 50%;
+    height: 100%;
+    background: url('../../assets/img/employee/harassment003.png') no-repeat center/cover;
+}
+.sec3 > .contentContainer > .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    color: var(--black);
+    text-align: right;
+}
+.sec3 > .contentContainer > .text > div > .title {
+    font-family: var(--font-B);
+    font-size: 1.8rem;
+    padding-bottom: 20px;
+}
+.sec3 > .contentContainer > .text > div > .title > span {
+    color: var(--yellow);
+}
+.sec3 > .contentContainer > .text > div > .description {
+    font-family: var(--font-R);
+    font-size: 1.3rem;
+}
+
+
+
+
+.sec4 > .contentContainer {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    height: 460px;
+    margin: 120px 0px;
+}
+.sec4 > .contentContainer > .img {
+    width: 50%;
+    height: 100%;
+    background: url('../../assets/img/employee/harassment004.png') no-repeat center/cover;
+}
+.sec4 > .contentContainer > .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 50%;
+    height: 100%;
+    color: var(--black);
+    text-align: left;
+}
+.sec4 > .contentContainer > .text > div > .title {
+    font-family: var(--font-B);
+    font-size: 1.8rem;
+    padding-bottom: 20px;
+}
+.sec4 > .contentContainer > .text > div > .title > span {
+    color: var(--yellow);
+}
+.sec4 > .contentContainer > .text > div > .description {
+    font-family: var(--font-R);
+    font-size: 1.3rem;
+}
+.sec4 > .contentContainer > .text > div > ul > li > p:nth-child(2) {
+    padding-left: 24px;
+}
+
+
+
+
+.sec5 {
+    width: 100%;
+    padding: 150px 20px;
+    background: url('../../assets/img/employee/harassment005.png') no-repeat center/cover;
+}
+.sec5 > p {
+    font-family: var(--font-B);
+    font-size: 2.4rem;
+}
+
+
+@media screen and (max-width: 960px) {
+    .sec2 > .contentContainer > .text > div > .description > p,
+    .sec3 > .contentContainer > .text > div > .description > p,
+    .sec4 > .contentContainer > .text > div > .description > p {
+        display: inline;
+        padding-right: 4px;
+    }
+}
+
+
+/* 태블릿 */
+
+@media screen and (max-width: 768px) {
+    .sec1 {
+        padding: 100px 20px;
+    }
+    .sec1 > .title {
+        font-size: 1.6rem;
+    }
+    .sec1 > .description {
+        font-size: 1rem;
+    }
+
+    .sec2 > .contentContainer {
+        height: 350px;
+        margin-bottom: 60px;
+    }
+    .sec2 > .contentContainer > .text,
+    .sec4 > .contentContainer > .text {
+        padding-right: 10px;
+    }
+    .sec2 > .contentContainer > .text > div > .title,
+    .sec3 > .contentContainer > .text > div > .title,
+    .sec4 > .contentContainer > .text > div > .title {
+        font-size: 1.6rem;
+        padding-bottom: 10px;
+    }
+    .sec2 > .contentContainer > .text > div > .description,
+    .sec3 > .contentContainer > .text > div > .description,
+    .sec4 > .contentContainer > .text > div > .description {
+        font-size: 1.1rem;
+    }
+
+    .sec3 {
+        padding: 40px 20px 40px 20px;
+    }
+    .sec3 > .contentContainer {
+        height: 320px;
+    }
+
+    .sec4 > .contentContainer {
+        height: 380px;
+        margin: 60px 0px;
+    }
+
+    .sec5 {
+        padding: 80px 20px;
+        background-position: 66%;
+    }
+    .sec5 > p {
+        font-size: 1.6rem;
+        word-break: keep-all;
+    }
+}
+
+
+
+@media screen and (max-width: 640px) {
+    .sec2 > .contentContainer {
+        flex-direction: column;
+        gap: 20px;
+        height: auto;
+    }
+    .sec2 > .contentContainer > .img {
+        width: 100%;
+        height: 300px;
+        background-position: center bottom;
+    }
+    .sec2 > .contentContainer > .text {
+        width: 100%;
+        padding: 0px 20px;
+        gap: 20px;
+    }
+
+    .sec3 {
+        padding: 20px 20px 60px 20px;
+    }
+    .sec3::after {
+        clip-path: polygon(10% 0, 100% 0, 100% 100%, 100% 100%);
+    }
+    .sec3 > .contentContainer {
+        flex-direction: column-reverse;
+        gap: 20px;
+        width: 100%;
+        height: auto;
+    }
+    .sec3 > .contentContainer > .img {
+        width: 100%;
+        height: 300px;
+    }
+    .sec3 > .contentContainer > .text {
+        width: 100%;
+        text-align: left;
+        gap: 20px;
+    }
+
+    .sec4 > .contentContainer {
+        flex-direction: column;
+        gap: 0px;
+        height: auto;
+        margin: 0px;
+    }
+    .sec4 > .contentContainer > .img {
+        width: 100%;
+        height: 300px;
+    }
+    .sec4 > .contentContainer > .text {
+        width: 100%;
+        padding: 20px 20px 60px 20px;
+        gap: 20px;
+    }
+    .sec4 > .contentContainer > .text > div > ul > li > p {
+        display: inline;
+    }
+    .sec4 > .contentContainer > .text > div > ul > li > p:nth-child(2) {
+        padding-left: 4px;
+    }
+}
+
+
+/* 모바일 */
+
+@media screen and (max-width: 480px) {
+    .sec1 {
+        padding: 80px 20px;
+    }
+    .sec1 > .title {
+        font-size: 7vw;
+    }
+    .sec1 > .description {
+        font-size: 4vw;
+    }
+
+    .sec2 > .contentContainer > .text > div > .title {
+        font-size: 6vw;
+        padding-bottom: 4px;
+    }
+    .sec2 > .contentContainer > .text > div > .description {
+        font-size: 4.2vw;
+    }
+
+    .sec3 > .contentContainer > .text > div > .title {
+        font-size: 6vw;
+        padding-bottom: 4px;
+    }
+    .sec3 > .contentContainer > .text > div > .description {
+        font-size: 4.2vw;
+    }
+
+    .sec4 > .contentContainer > .text > div > .title {
+        font-size: 6vw;
+        padding-bottom: 4px;
+    }
+    .sec4 > .contentContainer > .text > div > .description {
+        font-size: 4.2vw;
+    }
+
+    .sec5 > p {
+        font-size: 7vw;
+    }
+}

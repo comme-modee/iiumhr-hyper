@@ -1,0 +1,112 @@
+/* background image */
+.bg {
+    position: relative;
+    width: 100vw;
+    height: calc(var(--vh, 1vh) * 100);
+    background: url('../assets/img/main-bg.png') center/cover;
+    overflow: hidden;
+}
+
+/* title */
+.titleContainer {
+    text-align: center;
+    line-height: 4.5rem;
+    margin-bottom: 50px;
+}
+.sub {
+    color: var(--white);
+    font-size: 2.3rem;
+    font-family: var(--font-L);
+}
+.sub > span {
+    font-family: var(--font-B);
+}
+.main {
+    color: var(--white);
+    font-size: 4.6rem;
+    font-family: var(--font-B);
+}
+.yellow {
+    color: var(--yellow-main-title);
+}
+
+/* buttons */
+.buttonContainer {
+    display: flex;
+    gap: 30px;
+}
+.buttonContainer > button {
+    padding: 8px 20px;
+    background-color: rgba(256, 256, 256, 0.3);
+    color: var(--white);
+    font-family: var(--font-B);
+    font-size: 1.8rem;
+    box-shadow: rgba(0, 0, 0, 0.1) 5px 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+.buttonContainer > button:hover {
+    background-color: rgba(5, 34, 57, 0.5);
+    box-shadow: rgba(0, 0, 0, 0.4) 5px 5px;
+}
+
+/* text under the buttons */
+.guideText {
+    color: var(--white);
+    font-size: 1.4rem;
+    font-family: var(--font-L);
+    margin-top: 1.4rem;
+}
+
+
+
+
+/* 태블릿 */
+
+@media screen and (max-width: 1024px) {
+    .sub {
+        font-size: 1.8rem;
+    }
+    .main {
+        font-size: 3.6rem;
+    }
+    .titleContainer {
+        line-height: 3.6rem;
+        margin-bottom: 40px;
+    }
+    .buttonContainer {
+        gap: 20px;
+    }
+    .buttonContainer > button {
+        font-size: 1.6rem;
+    }
+}
+
+
+
+
+/* 모바일 */
+
+@media screen and (max-width: 480px) {
+    .sub {
+        font-size: 6vw;
+    }
+    .main {
+        font-size: 12vw;
+    }
+    .titleContainer {
+        line-height: 12vw;
+        margin-bottom: 30px;
+    }
+    .buttonContainer {
+        gap: 10px;
+    }
+    .buttonContainer > button {
+        padding: 6px 12px;
+        font-size: 5vw;
+    }
+    .guideText {
+        font-size: 4vw;
+        margin-top: 1rem;
+    }
+}

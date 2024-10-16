@@ -1,0 +1,439 @@
+.sec1 {
+    word-break: keep-all;
+    padding: 180px 20px;
+    background: url('../assets/img/intro001.png') no-repeat center/cover;
+}
+.sec1 > .title {
+    font-family: var(--font-B);
+    font-size: 2.4rem;
+    padding-bottom: 16px;
+}
+.sec1 > .title > span {
+    color: var(--yellow)
+}
+.sec1 > .description {
+    font-family: var(--font-R);
+    font-size: 1.8rem;
+}
+
+
+
+.sec2 {
+    color: var(--gray02);
+    font-size: 1.3rem;
+    padding: 100px 20px;
+}
+.sec2 > p {
+    padding-bottom: 34px;
+}
+.sec2 > p:first-child,
+.sec2 > p:last-child {
+    color: var(--black);
+    font-family: var(--font-B);
+    font-size: 1.6rem;
+}
+.sec2 > p:last-child {
+    position: relative;
+}
+.sec2 > p:last-child::after {
+    content: '';
+    position: absolute;
+    top: -20px;
+    right: -40px;
+    display: block;
+    width: 80px;
+    height: 80px;
+    opacity: 0.5;
+    background: url('../assets/img/intro002.png') no-repeat center/cover;
+}
+
+
+.sec3 {
+    padding: 100px 20px;
+    background-color: #e6e6e6;
+}
+.sec3 > div > .profile {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 70px;
+}
+.sec3 > div > .profile > .img {
+    position: relative;
+    z-index: 2;
+    width: 350px;
+    height: 400px;
+}
+.sec3 > div > .profile > .img::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 350px;
+    height: 400px;
+    top: 14px;
+    left: 14px;
+    background-color: var(--yellow);
+}
+.sec3 > div > .profile > .img > img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sec3 > div > .profile > .info {
+    color: var(--black);
+    text-align: left;
+}
+.sec3 > div > .profile > .info > p:first-child {
+    font-family: var(--font-R);
+    font-size: 1.5rem;
+    padding-bottom: 8px;
+}
+.sec3 > div > .profile > .info > p:first-child > span {
+    font-family: var(--font-B);
+    padding-left: 10px;
+}
+.sec3 > div > .profile > .info > p:nth-child(2) {
+    font-family: var(--font-B);
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+}
+.sec3 > div > .profile > .info > ul > li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-L);
+    font-size: 1.1rem;
+    color: var(--gray02);
+    padding-bottom: 2px;
+}
+.sec3 > div > .profile > .info > ul > li::before {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--blue);
+}
+.sec3 > div > .profile > .info > ul > li::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 12px;
+    left: 2px;
+    width: 1px;
+    height: 100%;
+    background-color: var(--blue);
+}
+.sec3 > div > .profile > .info > ul > li:last-child:after {
+    display: none;
+}
+
+
+
+
+.sec4 {
+    padding: 80px 20px;
+    background-color: var(--blue);
+}
+.sec4 > div > .title > p:nth-child(1) {
+    font-family: var(--font-B);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+.sec4 > div > .title > p:nth-child(2) {
+    font-family: var(--font-B);
+    font-size: 2rem;
+    color: var(--yellow);
+    padding-bottom: 40px;
+}
+.sec4 > div > .careerContainer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 30px 0px;
+    background-color: rgba(256, 256, 256, 0.1);
+    border-radius: 16px;
+    font-size: 1.4rem;
+}
+.sec4 > div > .careerContainer > p:first-child {
+    margin-bottom: 20px;
+}
+.sec4 > div > .careerContainer > div {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+.sec5 {
+    padding: 100px 0px;
+    background-color: #e6e6e6;
+}
+.sec5 > div > .profile {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+}
+.sec5 > div > .profile > .img {
+    position: relative;
+    width: 350px;
+    height: 400px;
+}
+.sec5 > div > .profile > .img::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 350px;
+    height: 400px;
+    top: 14px;
+    right: 14px;
+    background-color: var(--yellow);
+}
+.sec5 > div > .profile > .img > img {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sec5 > div > .profile > .info {
+    color: var(--black);
+    text-align: right;
+}
+.sec5 > div > .profile > .info > p:first-child {
+    font-family: var(--font-R);
+    font-size: 1.5rem;
+    padding-bottom: 8px;
+}
+.sec5 > div > .profile > .info > p:first-child > span {
+    font-family: var(--font-B);
+    padding-left: 10px;
+}
+.sec5 > div > .profile > .info > p:nth-child(2) {
+    font-family: var(--font-B);
+    font-size: 1.3rem;
+    padding-bottom: 10px;
+}
+.sec5 > div > .profile > .info > ul {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+.sec5 > div > .profile > .info > ul > li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: var(--font-L);
+    font-size: 1.1rem;
+    color: var(--gray02);
+    padding-bottom: 2px;
+}
+.sec5 > div > .profile > .info > ul > li::after {
+    content: '';
+    display: block;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--blue);
+}
+.sec5 > div > .profile > .info > ul > li::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 12px;
+    right: 2px;
+    width: 1px;
+    height: 100%;
+    background-color: var(--blue);
+}
+.sec5 > div > .profile > .info > ul > li:last-child::before {
+    display: none;
+}
+
+
+
+
+.sec6 {
+    padding: 80px 20px;
+}
+.sec6 > div > .title > p:nth-child(1) {
+    font-family: var(--font-B);
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    color: var(--black);
+}
+.sec6 > div > .title > p:nth-child(2) {
+    font-family: var(--font-B);
+    font-size: 2rem;
+    color: var(--yellow);
+    padding-bottom: 40px;
+}
+.sec6 > div > .careerContainer p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 40px 0px;
+    background-color: #273e54;
+    border-radius: 16px;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+}
+.sec6 > div > .careerContainer > div {
+    display: flex;
+    gap: 20px;
+}
+
+
+
+
+/* 태블릿 */
+
+@media screen and (max-width: 980px) {
+    .sec4 > div > .careerContainer p,
+    .sec6 > div > .careerContainer > div > p {
+        font-size: 1.2rem;
+        word-break: keep-all;
+        padding: 20px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .sec1 {
+        padding: 120px 20px;
+    }
+    .sec1 > .title {
+        font-size: 2rem;
+    }
+    .sec1 > .description {
+        font-size: 1.4rem;
+    }
+    .sec2 {
+        font-size: 1rem;
+        padding: 60px 20px;
+        word-break: keep-all;
+    }
+    .sec2 > p {
+        padding-bottom: 20px;
+    }
+    .sec2 > p:first-child {
+        font-size: 1.2rem;
+    }
+    .sec2 > p:last-child {
+        font-size: 1.2rem;
+        padding-bottom: 0px;
+    }
+    .sec2 > p:last-child::after {
+        top: -15px;
+        right: -30px;
+        width: 50px;
+        height: 50px;
+    }
+
+    .sec3 {
+        padding: 60px 20px;
+    }
+
+    .sec4 {
+        padding: 60px 20px;
+    }
+    .sec4 > div > .title > p:nth-child(2) {
+        padding-bottom: 30px;
+    }
+    .sec4 > div > .careerContainer p {
+        font-size: 1rem;
+    }
+
+    .sec5 {
+        padding: 60px 20px;
+    }
+    .sec5 > div > .profile {
+        flex-direction: column-reverse;
+        gap: 50px;
+    }
+
+    .sec6 {
+        padding: 60px 20px;
+    }
+    .sec6 > div > .title > p:nth-child(2) {
+        padding-bottom: 30px;
+    }
+    .sec6 > div > .careerContainer > div > p {
+        font-size: 1rem;
+        word-break: keep-all;
+        padding: 20px;
+    }
+}
+
+
+
+
+/* 모바일 */
+
+@media screen and (max-width: 480px) {
+    .sec1 {
+        padding: 80px 20px;
+    }
+    .sec1 > .title {
+        font-size: 7vw;
+    }
+    .sec1 > .description {
+        font-size: 4vw;
+    }
+
+    
+    .sec3 > div > .profile {
+        gap: 50px;
+    }
+    .sec3 > div > .profile > .img::after {
+        width: 100%;
+        top: 10px;
+        left: 10px;
+    }
+    .sec3 > div > .profile > .info > ul > li {
+        font-size: 0.8rem;
+    }
+    .sec3 > div > .profile > .info > p:first-child {
+        padding-bottom: 0px;
+    }
+
+    .sec4 > div > .careerContainer > div {
+        flex-direction: column;
+        gap: 0px;
+    }
+    
+    .sec5 > div > .profile > .info > p:first-child {
+        padding-bottom: 0px;
+    }
+    .sec5 > div > .profile > .img {
+        width: 100%;
+    }
+    .sec5 > div > .profile > .img::after {
+        width: 100%;
+        top: 10px;
+        right: 10px;
+    }
+    .sec5 > div > .profile > .info > ul > li {
+        font-size: 0.8rem;
+    }
+
+    .sec6 > div > .careerContainer > div {
+        flex-direction: column;
+        gap: 0;
+    }
+    .sec6 > div > .careerContainer > div > p:last-child {
+        margin-bottom: 0px;
+    }
+}

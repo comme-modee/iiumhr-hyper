@@ -1,0 +1,176 @@
+.contact {
+    word-break: keep-all;
+    background-color: var(--yellow);
+    text-align: center;
+    padding: 40px 20px;
+}
+.contact .title {
+    font-size: 2.5rem;
+}
+.contact .description {
+    font-family: var(--font-L);
+    font-size: 1.4rem;
+    padding-bottom: 30px;
+}
+
+/* form */
+.contact > div > form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.contact > div > form ::placeholder{
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: var(--font-M);
+    color: var(--gray01);
+}
+.contact > div > form > .formRow > input,
+.contact > div > form textarea {
+    background-color: rgba(256, 256, 256, 0.6);
+    width: 100%;
+    font-size: 1rem;
+    font-family: var(--font-M);
+    color: var(--black);
+}
+.contact > div > form > .formRow > input {
+    height: 60px;
+    text-align: center;
+}
+.contact > div > form > .formRow > input::placeholder{
+    position: relative;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contact > div > form textarea {
+    height: 300px;
+    padding: 20px;
+}
+.contact > div > form textarea::placeholder{
+    position: relative;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.contact > div > form > .formRow {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+.contact > div > form > button {
+    width: 100%;
+    border-radius: 50px;
+    color: var(--yellow);
+    font-family: var(--font-B);
+    font-size: 1.4rem;
+    background-color: rgba(256, 256, 256, 0.8);
+    padding: 14px;
+}
+.contact > div > form > .checkbox {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-align: left;
+}
+.contact > div > form > .checkbox > label > p {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+}
+.contact > div > form > .checkbox > label > p::before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-color: var(--white);
+    padding: 2px;
+}
+.contact > div > form > .checkbox > label > input {
+    display: none;
+}
+.checkbox input[type='checkbox']:checked + p::after {
+    content: '✔';
+    font-weight: 900; 
+    color: var(--blue);
+    position: absolute;
+    left: 2px;
+}
+.contact > div > form > .checkbox > .privacyRightBtn {
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 6px 12px;
+    background-color: rgba(256, 256, 256, 0.3);
+}
+
+
+
+
+/* 태블릿 */
+
+@media screen and (max-width: 768px) {
+    .contact > div > form > .formRow {
+        gap: 16px;
+    }
+    .contact .title {
+        font-size: 2rem;
+    }
+    .contact .description {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+/* 모바일 */
+
+@media screen and (max-width: 480px) {
+    .contact .title {
+        font-size: 7vw;
+        line-height: 9vw;
+        padding-bottom: 8px;
+    }
+    .contact .description {
+        font-size: 1rem;
+        padding-bottom: 20px;
+    }
+    .contact > div > form {
+        gap: 10px;
+    }
+    .contact > div > form textarea {
+        height: 200px;
+    }
+    .contact > div > form ::placeholder{
+        font-size: 1rem;
+    }
+    .contact > div > form > .formRow {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+    .contact > div > form > .formRow > input {
+        height: 50px;
+    }
+    .contact > div > form > .formRow > input::placeholder {
+        top: 24%;
+    }
+    .contact > div > form > button {
+        padding: 10px;
+        font-size: 1.2rem;
+    }
+    .contact > div > form > .checkbox > label > p {
+        font-size: 1rem;
+        gap: 6px;
+    }
+    .contact > div > form > .checkbox > label > p::before {
+        width: 14px;
+        height: 14px;
+    }
+    .contact > div > form > .checkbox > .privacyRightBtn {
+        font-size: 1rem;
+        padding: 4px 10px;
+    }
+}

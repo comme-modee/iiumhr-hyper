@@ -1,0 +1,114 @@
+.categoryContainer {
+    padding: 80px 20px;
+}
+.category {
+    display: flex;
+    gap: 30px;
+}
+.category > .box {
+    width: 100%;
+    padding: 26px 0px;
+    border: 2px solid #c9c9c9;
+    border-radius: 15px;
+    gap: 6px;
+    cursor: pointer;
+}
+.employeeCategory > .box {
+    padding: 32px 0px;
+}
+.category > .box > p {
+    font-size: 1.2rem;
+    color: var(--black);
+}
+.employeeCategory > .box > p {
+    font-size: 1.4rem;
+    padding-top: 10px;
+}
+.businessCategory > .box > img {
+    height: 40px;
+}
+.employeeCategory > .box > img {
+    height: 50px;
+}
+.category > .active {
+    position: relative;
+    border: 2px solid #122b43;
+    background-color: #122b43;
+}
+.category > .active::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+}
+.businessCategory > .active::before {
+    bottom: -14px;
+    border-left: 14px solid transparent;
+    border-right: 14px solid transparent;
+    border-top: 14px solid #122b43;
+}
+.employeeCategory > .active::before {
+    bottom: -20px;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #122b43;
+}
+.category > .active > p {
+    color: var(--white);
+}
+
+
+
+/* 태블릿 */
+
+@media screen and (max-width: 768px) {
+    .categoryContainer {
+        padding: 40px 20px;
+    }
+    .category {
+        gap: 14px;
+    }
+    .businessCategory > .box > img {
+        height: 30px;
+    }
+    .businessCategory > .box > p {
+        font-size: 1.1rem;
+    }
+    .category > .box {
+        padding: 18px 0px;
+        width: calc(50% - 10px);
+    }
+    .businessCategory > .active::before {
+        bottom: -10px;
+        border-left: 10px solid transparent;
+        border-right: 10px solid transparent;
+        border-top: 10px solid #122b43;
+    }
+    .employeeCategory > .box > img {
+        height: 30px;
+    }
+    .employeeCategory > .box > p {
+        font-size: 1.1rem;
+    }
+    .employeeCategory > .active::before {
+        bottom: -12px;
+        border-left: 12px solid transparent;
+        border-right: 12px solid transparent;
+        border-top: 12px solid #122b43;
+    }
+}
+
+
+
+
+/* 모바일 */
+
+@media screen and (max-width: 480px) {
+    .category {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}

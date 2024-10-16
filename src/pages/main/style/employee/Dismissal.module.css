@@ -1,0 +1,486 @@
+.sec1 {
+    word-break: keep-all;
+    padding: 180px 20px;
+    background: url('../../assets/img/employee/dismissal001.png') no-repeat center/cover;
+}
+.sec1 > .title {
+    font-family: var(--font-B);
+    font-size: 2.4rem;
+    padding-bottom: 10px;
+}
+.sec1 > .title > span {
+    color: var(--yellow);
+}
+.sec1 > .description {
+    font-family: var(--font-R);
+    font-size: 1.8rem;
+}
+
+
+
+.sec2 > .boxContainer {
+    margin-bottom: 100px;
+}
+.sec2 > .boxContainer > .box,
+.sec2 > .boxContainer > .row > .interview {
+    width: 100%;
+    border-radius: 20px;
+    border: 1px solid #a6a6a6;
+    background-color: #ececec;
+    padding: 30px;
+    margin-bottom: 20px;
+}
+.sec2 > .boxContainer > .box p:nth-child(1) {
+    color: var(--black);
+    font-family: var(--font-B);
+    font-size: 1.8rem;
+    padding-bottom: 10px;
+}
+.sec2 > .boxContainer > .box p:nth-child(1) > span {
+    color: var(--yellow);
+}
+.sec2 > .boxContainer > .box p:nth-child(2),
+.sec2 > .boxContainer > .box ul li {
+    font-family: var(--font-R);
+    font-size: 1.3rem;
+    color: var(--gray02);
+}
+.sec2 > .boxContainer > div {
+    width: 100%;
+}
+.sec2 > .boxContainer > .row {
+    display: flex;
+    gap: 26px;
+}
+.sec2 > .boxContainer > .row > .interview {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    height: 100px;
+    padding: 0px;
+    overflow: hidden;
+}
+.sec2 > .boxContainer > .row > .interview:nth-child(1) {
+    padding-left: 22px;
+}
+.sec2 > .boxContainer > .row > .interview:nth-child(2) {
+    padding-left: 10px;
+}
+.sec2 > .boxContainer > .row > .interview > img {
+    height: 100%;
+}
+.sec2 > .boxContainer > .row > .interview > p {
+    position: relative;
+    font-family: var(--font-L);
+    font-size: 1.3rem;
+    color: #7d7d7d;
+    text-align: left;
+}
+.sec2 > .boxContainer > .row > .interview > p::before {
+    content: '“';
+    position: absolute;
+    top: -20px;
+    left: -22px;
+    display: block;
+    font-size: 3rem;
+}
+.sec2 > .boxContainer > .row > .interview > p > span {
+    position: absolute;
+    bottom: 0;
+    font-size: 3rem;
+    line-height: 1rem;
+    padding-left: 2px;
+}
+.sec2 > .boxContainer > .box:nth-child(3) {
+    display: flex;
+    gap: 34px;
+    text-align: left;
+}
+.sec2 > .boxContainer > .box:nth-child(3) > .img {
+    width: 180px;
+    height: auto;
+    overflow: hidden;
+}
+.sec2 > .boxContainer > .box:nth-child(3) > .img > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: -20% 30px;
+    transform: scale(1.5);
+}
+
+
+
+
+.sec3 {
+    padding: 90px 0px;
+    background-color: var(--yellow);
+    font-family: var(--font-B);
+    font-size: 2.2rem;
+}
+
+
+
+
+.sec4 {
+    padding: 90px 0px 280px 0px;
+    background-color: var(--blue);
+}
+.sec4 > div > .title {
+    font-family: var(--font-B);
+    font-size: 1.9rem;
+    padding-bottom: 50px;
+}
+.sec4 > div > .title > span {
+    color: var(--yellow);
+}
+.sec4 > div > .graph {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 1.4rem;
+}
+.sec4 > div > .graph > .step1 {
+    position: relative;
+    padding-bottom: 30px;
+}
+.sec4 > div > .graph > .step1 > p {
+    width: 270px;
+    padding: 10px;
+    color: var(--black);
+    background-color: var(--white);
+    margin-bottom: 30px;
+}
+.sec4 > div > .graph > .step1 > p:first-child {
+    position: relative;
+}
+.sec4 > div > .graph > .step1 > p:first-child::before {
+    content: '3개월 이내 신청';
+    right: 50px;
+    bottom: -24px;
+    position: absolute;
+    font-family: var(--font-R);
+    font-size: 0.8rem;
+    color: var(--white);
+}
+.sec4 > div > .graph > .step2 > div > p {
+    position: relative;
+    z-index: 5;
+    width: 240px;
+    padding: 10px;
+    color: var(--black);
+    background-color: var(--white);
+    margin-bottom: 30px;
+}
+.sec4 > div > .graph > .step2 {
+    display: flex;
+    gap: 110px;
+}
+.sec4 > div > .graph > .step2 > div > p:first-child {
+    color: var(--white);
+    background-color: var(--yellow);
+}
+.sec4 > div > .graph > .step2 .step3 > div > p {
+    width: 240px;
+    padding: 10px;
+    color: var(--black);
+    background-color: var(--white);
+    margin-bottom: 30px;
+}
+.sec4 > div > .graph > .step2 > div:nth-child(2) {
+    position: relative;
+}
+.sec4 > div > .graph > .step2 .step3 {
+    position: absolute;
+    top: 120%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 60px;
+}
+.sec4 > div > .graph > .step2 .step3 > div:nth-child(2) > p:first-child {
+    position: relative;
+}
+.sec4 > div > .graph > .step2 .step3 > div:nth-child(2) > p:first-child::before {
+    content: '15일 이내 신청';
+    right: 34px;
+    bottom: -24px;
+    position: absolute;
+    font-family: var(--font-R);
+    font-size: 0.8rem;
+    color: var(--white);
+}
+
+/* 점선 작업 */
+.sec4 > div > .graph > .step2 > div:nth-child(2) {
+    position: relative;
+}
+.sec4 > div > .graph > .step1 > .leftLine,
+.sec4 > div > .graph > .step2 > div > .leftLine {
+    position: absolute;
+    left: -40px;
+    bottom: -90px;
+    width: 40px;
+    height: 180px;
+    border-top: 2px dotted var(--yellow);
+    border-left: 2px dotted var(--yellow);
+}
+.sec4 > div > .graph > .step1 > .rightLine,
+.sec4 > div > .graph > .step2 > div > .rightLine {
+    position: absolute;
+    right: -40px;
+    bottom: -90px;
+    width: 40px;
+    height: 180px;
+    border-top: 2px dotted var(--yellow);
+    border-right: 2px dotted var(--yellow);
+}
+.sec4 > div > .graph > .step2 > div > .leftLine,
+.sec4 > div > .graph > .step2 > div > .rightLine {
+    bottom: -120px;
+}
+
+
+
+
+/* 태블릿 */
+
+@media screen and (max-width: 768px) {
+    .sec1 {
+        padding: 100px 20px;
+    }
+    .sec1 > .title {
+        font-size: 1.6rem;
+    }
+    .sec1 > .description {
+        font-size: 1rem;
+    }
+
+    .sec2 {
+        padding: 0px 20px 20px 20px;
+    }
+    .sec2 > .boxContainer {
+        margin-bottom: 0px;
+    }
+    .sec2 > .boxContainer > .box {
+        border-radius: 14px;
+        padding: 20px;
+        margin-bottom: 10px;
+    }
+    .sec2 > .boxContainer > .row > .interview {
+        height: 80px;
+        border-radius: 14px;
+        padding: 0px 0px 0px 20px;
+        margin-bottom: 10px;
+    }
+    .sec2 > .boxContainer > .box p:nth-child(1) {
+        font-size: 1.6rem;
+    }
+    .sec2 > .boxContainer > .box p:nth-child(2),
+    .sec2 > .boxContainer > .box ul li,
+    .sec2 > .boxContainer > .row > .interview > p {
+        font-size: 1rem;
+        word-break: keep-all;
+    }
+    .sec2 > .boxContainer > .row > .interview > p::before {
+        top: -8px;
+        left: -16px;
+        font-size: 2rem;
+    }
+    .sec2 > .boxContainer > .row > .interview > p > span {
+        font-size: 2rem;
+    }
+    .sec2 > .boxContainer > .box:nth-child(3) {
+        gap: 10px;
+    }
+
+    .sec3 {
+        word-break: keep-all;
+        padding: 70px 0px;
+        font-size: 1.6rem;
+    }
+
+    .sec4 {
+        padding: 60px 20px 220px 20px;
+    }
+    .sec4 > div > .title {
+        font-size: 1.6rem;
+        padding-bottom: 30px;
+    }
+    .sec4 > div > .graph {
+        font-size: 1.2rem;
+    }
+    .sec4 > div > .graph > .step1 {
+        padding-bottom: 20px;
+    }
+    .sec4 > div > .graph > .step1 > p {
+        width: 220px;
+    }
+    .sec4 > div > .graph > .step1 > p:first-child::before {
+        right: 20px;
+    }
+    .sec4 > div > .graph > .step2 {
+        gap: 80px;
+    }
+    .sec4 > div > .graph > .step2 > div > p {
+        width: 220px;
+        margin-bottom: 20px;
+    }
+    .sec4 > div > .graph > .step1 > p:nth-child(2),
+    .sec4 > div > .graph > .step1 > p:nth-child(3) { 
+        margin-bottom: 20px;
+    }
+    .sec4 > div > .graph > .step2 .step3 {
+        gap: 40px;
+    }
+    .sec4 > div > .graph > .step2 .step3 > div > p {
+        width: 180px;
+    }
+    .sec4 > div > .graph > .step2 .step3 > div:nth-child(2) > p:first-child::before {
+        right: 20px;
+    }
+
+    /* 점선 작업 */
+    .sec4 > div > .graph > .step1 > .leftLine {
+        height: 150px;
+    }
+    .sec4 > div > .graph > .step1 > .rightLine {
+        height: 150px;
+    }
+    .sec4 > div > .graph > .step2 > div > .leftLine {
+        left: -25px;
+        bottom: -36px;
+        width: 25px;
+        height: 80px;
+    }
+    .sec4 > div > .graph > .step2 > div > .rightLine {
+        right: -25px;
+        bottom: -36px;
+        width: 25px;
+        height: 80px;
+    }
+}
+
+
+
+
+/* 모바일 */
+
+@media screen and (max-width: 480px) {
+    .sec1 {
+        padding: 80px 20px;
+    }
+    .sec1 > .title {
+        font-size: 7vw;
+    }
+    .sec1 > .description {
+        font-size: 4vw;
+    }
+
+    
+    
+    .sec2 > .boxContainer > .row > .interview:nth-child(1) {
+        padding-left: 10px;
+    }
+    .sec2 > .boxContainer > .row > .interview:nth-child(2) {
+        padding-left: 4px;
+    }
+    .sec2 > .boxContainer > .row > .interview > img {
+        height: 90%;
+        transform: translateY(8%);
+    }
+    .sec2 > .boxContainer > .box p:nth-child(1) {
+        font-size: 7vw;
+    }
+    .sec2 > .boxContainer > .box p:nth-child(2),
+    .sec2 > .boxContainer > .box ul li,
+    .sec2 > .boxContainer > .row > .interview > p {
+        font-size: 4.2vw;
+    }
+    .sec2 > .boxContainer > .row {
+        flex-direction: column;
+        gap: 0px;
+    }
+    .sec2 > .boxContainer > .box:nth-child(3) {
+        flex-direction: column;
+        gap: 20px;
+        margin-bottom: 0px;
+    }
+    .sec2 > .boxContainer > .box:nth-child(3) > .img {
+        width: 100%;
+        height: 200px;
+    }
+    .sec2 > .boxContainer > .box:nth-child(3) > .img > img {
+        object-position: center top;
+        transform: scale(1);
+    }
+    
+    
+
+    .sec3 {
+        font-size: 7vw;
+    }
+
+    .sec4 {
+        padding: 60px 20px 180px 20px;
+    }
+    .sec4 > div > .title {
+        font-size: 7vw;
+    }
+    .sec4 > div > .graph {
+        font-size: 1rem;
+    }
+    .sec4 > div > .graph > .step1 {
+        padding-bottom: 0px;
+    }
+    .sec4 > div > .graph > .step1 > p {
+        width: 150px;
+    }
+    .sec4 > div > .graph > .step1 > p:first-child::before {
+        right: 10px;
+    }
+    .sec4 > div > .graph > .step2 {
+        transform: translateX(-20px);
+        gap: 50px;
+    }
+    .sec4 > div > .graph > .step2 > div > p {
+        width: 120px;
+        margin-bottom: 20px;
+    }
+    .sec4 > div > .graph > .step1 > p:nth-child(2),
+    .sec4 > div > .graph > .step1 > p:nth-child(3) { 
+        margin-bottom: 20px;
+    }
+    .sec4 > div > .graph > .step2 .step3 {
+        top: 100%;
+        gap: 20px;
+        transform: translateX(-60%);
+
+    }
+    .sec4 > div > .graph > .step2 .step3 > div > p {
+        width: 120px;
+    }
+    .sec4 > div > .graph > .step2 .step3 > div:nth-child(2) > p:first-child::before {
+        right: 10px;
+    }
+
+    /* 점선 작업 */
+    .sec4 > div > .graph > .step1 > .leftLine {
+        left: -30px;
+        bottom: -80px;
+        width: 30px;
+        height: 120px;
+    }
+    .sec4 > div > .graph > .step1 > .rightLine {
+        right: -20px;
+        bottom: -80px;
+        width: 20px;
+        height: 120px;
+    }
+    .sec4 > div > .graph > .step2 > div > .leftLine {
+        bottom: -30px;
+    }
+    .sec4 > div > .graph > .step2 > div > .rightLine {
+        bottom: -30px;
+    }
+}

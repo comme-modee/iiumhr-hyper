@@ -1,0 +1,69 @@
+.mainHeader {
+    position: absolute;
+    width: 100vw;
+    top: 0;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    position: fixed;
+    z-index: 9997;
+    width: 100vw;
+    top: 0;
+    height: 90px;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: var(--blue);
+}
+.header > img {
+    position: absolute;
+    top: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.header::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 6px;
+    background-color: var(--yellow);
+    margin-top: 90px;
+}
+
+img {
+    z-index: 1;
+    cursor: pointer;
+}
+
+
+
+/* 태블릿 */
+
+@media screen and (max-width: 1024px) {
+    .mainHeader {
+        padding: 20px;   
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .mainHeader {
+        padding: 14px;   
+    }
+    .mainHeader > img {
+        width: 90px;
+    }
+    .header {
+        height: 60px;
+    }
+    .header::after {
+        height: 4px;
+        margin-top: 60px;
+    }
+    .header > img {
+        top: 12px;
+        width: 90px;
+    }
+}

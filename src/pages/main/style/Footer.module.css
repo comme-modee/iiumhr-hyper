@@ -1,0 +1,44 @@
+footer {
+    background-color: #e6e6e6;
+    padding: 20px;
+}
+footer > .info {
+    display: flex;
+    gap: 20px;
+}
+footer > .info > p {
+    color: var(--gray01);
+    font-family: var(--font-L);
+    font-size: 0.8rem;
+}
+footer > .info > img {
+    object-fit: contain;
+}
+
+.mainFooter {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background-color: #dddddd;
+    font-family: var(--font-L);
+    font-size: 0.8rem;
+    color: var(--gray03);
+    text-align: center;
+}
+
+
+
+
+/* 태블릿 */
+
+@media screen and (max-width: 768px) {
+    .mainFooter {
+        font-size: 0.7rem;
+    }
+    footer > .info {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}

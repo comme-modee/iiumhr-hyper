@@ -1,0 +1,70 @@
+@import './Fonts.css';
+
+:root {
+  --vh: 100%;
+
+  /* COLORS */
+  --black: #1f1f1f;
+  --white: #ffffff;
+  --gray01: #9f9f9f; /* input text, subpage footer */
+  --gray02: #616161; /* sub text */
+  --gray03: #4a4a4a; /* main footer */
+  --gray04: #2f2f2f; /* main footer */
+  --yellow: #bfa449; /* common yellow color */
+  --yellow-main-title: #ddbf5e; /* main title color */
+  --blue: #052239;
+
+  /* FONTS */
+  --font-B: 'NotoSans-B';
+  --font-M: 'NotoSans-M';
+  --font-R: 'NotoSans-R';
+  --font-L: 'NotoSans-L';
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: none;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input,
+textarea,
+button {
+  border: none;
+}
+
+/* body {
+  font-family: var(--font-M);
+  color: var(--white);
+  letter-spacing: -0.06rem;
+  overflow-x: hidden;
+  height: var(--vh);
+  margin-top: 90px;
+} */
+
+p {
+  margin-bottom: 0;
+}
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+.fp-watermark {
+  display: none !important;
+}
