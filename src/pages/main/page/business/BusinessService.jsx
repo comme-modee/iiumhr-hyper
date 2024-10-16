@@ -26,7 +26,7 @@ const BusinessService = () => {
     // }
     return (
         <ReactFullpage
-            licenseKey={''}
+            licenseKey={'gplv3-license'}
             scrollingSpeed={800}
             render={({ state, fullpageApi }) => {
                 // handleFullpageApi(fullpageApi)
