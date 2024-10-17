@@ -5,6 +5,7 @@ import Footer from '../component/Footer';
 import Contact from '../component/Contact';
 import Map from '../component/Map';
 import commonStyles from '../style/Common.module.css';
+import { AuthProvider, UserInfoProvider } from '@/common/context';
 
 const AppLayout = ({ children }) => {
     const location = useLocation();
@@ -73,9 +74,13 @@ const AppLayout = ({ children }) => {
             {children}
         </div>
         :
-        <React.Fragment>
-            {children}
-        </React.Fragment>
+        <AuthProvider>
+            <UserInfoProvider>
+                <React.Fragment>
+                    {children}
+                </React.Fragment>
+            </UserInfoProvider>
+        </AuthProvider>
     )
 }
 

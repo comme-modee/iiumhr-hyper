@@ -18,11 +18,11 @@ const App = () => {
 	return (
 		<ThemeProvider>
 			<NotificationProvider>
-				<AuthProvider>
-					<UserInfoProvider>
+				{/* <AuthProvider>
+					<UserInfoProvider> */}
 						<AppRoutes />
-					</UserInfoProvider>
-				</AuthProvider>
+					{/* </UserInfoProvider>
+				</AuthProvider> */}
 			</NotificationProvider>
 		</ThemeProvider>
 	);
