@@ -16,7 +16,7 @@
   <div id="hyper"></div>
   <script type="module" src="/src/main.jsx"></script>
 </body>
-<!-- <script>
+<script>
   (function() {
       let last = 0;
       let startTime = new Date();
@@ -69,7 +69,7 @@
           referrerData: document.referrer
       };
   
-      fetch('http://192.168.0.240:8081/adminapi/visitor', {
+      fetch('http://192.168.0.116:80/adminapi/visitor', {
           method: 'POST',
           headers: {
               'Content-Type': 'application/json',
@@ -86,7 +86,7 @@
               stayDuration: stayTime / 1000
           };
   
-          fetch('http://192.168.0.240:8081/adminapi/visitortime', {
+          fetch('http://192.168.0.116:80/adminapi/visitortime', {
               method: 'POST',
               headers: {
                   'Content-Type': 'application/json',
@@ -95,5 +95,5 @@
           });
       }
   })();
-</script> -->
+</script>
 </html>
