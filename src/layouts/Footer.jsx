@@ -6,9 +6,9 @@ export default function Footer() {
 	return (
 		<footer className="footer">
 			<div className="container-fluid">
-				{/* <Row>
-					<Col md={6}>{currentYear} © HD - HD.com</Col>
-				</Row> */}
+				<Row>
+					<Col md={6}>{currentYear} © iiumhr</Col>
+				</Row>
 			</div>
 		</footer>
 	);

@@ -14,7 +14,7 @@ const AppLayout = ({ children }) => {
     const isIntroPath = location.pathname.includes('intro');
     const isBusinessPath = location.pathname.includes('business/');
     const isEmployeePath = location.pathname.includes('employee/');
-    const isAdminPath = location.pathname.includes('admin');
+    const isAdminPath = location.pathname.includes('admin') || location.pathname.includes('login') || location.pathname.includes('logout') || location.pathname.includes('error');
     const isFullPagePath = location.pathname === '/business' || location.pathname === '/employee';
 
     const contactType = isBusinessPath ? 'business' : isEmployeePath ? 'employee' : '';
@@ -47,7 +47,7 @@ const AppLayout = ({ children }) => {
         return () => {
             updateBodyStyles({ marginTop: '0px' });
         };
-    }, [isMainPath, isTablet, isIntroPath, isBusinessPath, isEmployeePath, isFullPagePath]);
+    }, [isMainPath, isTablet, isIntroPath, isBusinessPath, isEmployeePath, isFullPagePath, isAdminPath]);
 
     return (
         (isMainPath || isIntroPath || isBusinessPath || isEmployeePath)
@@ -75,7 +75,6 @@ const AppLayout = ({ children }) => {
         :
         <React.Fragment>
             {children}
-            <Footer type={'main'} />
         </React.Fragment>
     )
 }
