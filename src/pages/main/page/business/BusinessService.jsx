@@ -37,6 +37,7 @@ const BusinessService = () => {
                 activeIndex={activeIndex}
                 setActiveIndex={setActiveIndex}
                 allowScroll={!isOpenPrivacyPolicy}
+                transitionDuration={1000}
             >
                 <FullpageSection>
                     <div className={classNames(styles.sec1, commonStyles.flexCenter)}>
@@ -113,9 +114,9 @@ const BusinessService = () => {
                                         <div className={styles.content}>
                                             <p>기업자문</p>
                                             <p>
-                                                기업의 노무 관리<br />
-                                                역량을 강화하여<br />
-                                                안정적인 사업 운영을<br />
+                                                기업의 노무 관리<span className={styles.lineBreak}> </span>
+                                                역량을 강화하여<span className={styles.lineBreak}> </span>
+                                                안정적인 사업 운영을<span className={styles.lineBreak}> </span>
                                                 도와 드립니다.
                                             </p>
                                             <GoToDetailPageBtn url={'/business/advisory'} />
@@ -128,8 +129,8 @@ const BusinessService = () => {
                                         <div className={styles.content}>
                                             <p>급여관리</p>
                                             <p>
-                                                기업 내 인사, 회계팀에서<br />
-                                                직접 운영하는 급여 업무를<br />
+                                                기업 내 인사, 회계팀에서<span className={styles.lineBreak}> </span>
+                                                직접 운영하는 급여 업무를<span className={styles.lineBreak}> </span>
                                                 위탁 운영합니다.
                                             </p>
                                             <GoToDetailPageBtn url={'/business/payroll'} />
@@ -142,8 +143,8 @@ const BusinessService = () => {
                                         <div className={styles.content}>
                                             <p>HR 컨설팅</p>
                                             <p>
-                                                체계적인 프로세스를<br />
-                                                기반으로 효율적인<br />
+                                                체계적인 프로세스를<span className={styles.lineBreak}> </span>
+                                                기반으로 효율적인<span className={styles.lineBreak}> </span>
                                                 서비스를 제공 합니다.
                                             </p>
                                             <GoToDetailPageBtn url={'/business/hr'} />
@@ -156,9 +157,9 @@ const BusinessService = () => {
                                         <div className={styles.content}>
                                             <p>IR 컨설팅</p>
                                             <p>
-                                                상호 원만한 협력을<br />
-                                                이끌어 낼 수 있는<br />
-                                                최적의 프로그램을<br />
+                                                상호 원만한 협력을<span className={styles.lineBreak}> </span>
+                                                이끌어 낼 수 있는<span className={styles.lineBreak}> </span>
+                                                최적의 프로그램을<span className={styles.lineBreak}> </span>
                                                 제시하고 있습니다.
                                             </p>
                                             <GoToDetailPageBtn url={'/business/ir'} />
@@ -171,8 +172,8 @@ const BusinessService = () => {
                                         <div className={styles.content}>
                                             <p>강의 및 교육</p>
                                             <p>
-                                                실전에서 바로 적용하고<br />
-                                                사용 가능한 실무형 강의 및<br />
+                                                실전에서 바로 적용하고<span className={styles.lineBreak}> </span>
+                                                사용 가능한 실무형 강의 및<span className={styles.lineBreak}> </span>
                                                 교육을 진행합니다.
                                             </p>
                                             <GoToDetailPageBtn url={'/business/edu'} />
@@ -247,6 +248,7 @@ const BusinessService = () => {
                 <FullpageSection>
                     <div className={classNames(styles.sec5, commonStyles.flexCenter)}>
                         <Contact 
+                            type={'business'}
                             isOpenPrivacyPolicy={isOpenPrivacyPolicy}
                             setIsOpenPrivacyPolicy={setIsOpenPrivacyPolicy}
                         />

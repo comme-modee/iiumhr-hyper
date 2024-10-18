@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import { contactApi } from '@/common/api';
 import { useNotificationContext } from '@/common/context';
 import { motion } from 'framer-motion';
-import { useState } from 'react';
 import PrivacyPolicy from './privacyPolicy';
 
 const Contact = ({ type, isOpenPrivacyPolicy, setIsOpenPrivacyPolicy }) => {
@@ -56,7 +55,7 @@ const Contact = ({ type, isOpenPrivacyPolicy, setIsOpenPrivacyPolicy }) => {
                         className={styles.title}
                     >
                         {isBusiness ? '노무 업무에 관한 모든 것을 함께 합니다.' :
-                            isEmployee ? '기본적인 권리! 스스로 지켜야 합니다.' :
+                            isEmployee ? <>기본적인 권리!<span className={styles.lineBreak}> </span>스스로 지켜야 합니다.</> :
                                 '여러분의 최고의 파트너 노무법인 이음'}
                     </motion.div>
                     <motion.div
@@ -70,8 +69,8 @@ const Contact = ({ type, isOpenPrivacyPolicy, setIsOpenPrivacyPolicy }) => {
                         className={styles.description}
                     >
                         {isBusiness ? '대표님들께서는 오직 사업장의 성장에만 집중하시길 바랍니다.' :
-                            isEmployee ? '세상에 당연한 것은 없습니다. 이음이 여러분과 함께합니다.' :
-                                '어렵고 곤란한 문제들, 이음이 여러분과 함께하겠습니다.'}
+                            isEmployee ? <>세상에 당연한 것은 없습니다.<span className={styles.lineBreak}> </span>이음이 여러분과 함께합니다.</> :
+                                <>어렵고 곤란한 문제들,<span className={styles.lineBreak}> </span>이음이 여러분과 함께하겠습니다.</>}
                     </motion.div>
                     <motion.form
                         initial={{ opacity: 0, y: 30 }}

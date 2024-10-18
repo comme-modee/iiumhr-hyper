@@ -1,5 +1,6 @@
 footer {
-    background-color: #e6e6e6;
+    position: relative;
+    background-color: var(--blue);
     padding: 20px;
 }
 footer > .info {
@@ -7,11 +8,19 @@ footer > .info {
     gap: 20px;
 }
 footer > .info > p {
-    color: var(--gray01);
+    color: var(--white);
     font-family: var(--font-L);
     font-size: 0.8rem;
+    word-break: keep-all;
 }
-footer > .info > img {
+footer > .info > p > .lineBreak {
+    display: block;
+}
+footer > .info > .img {
+    display: flex;
+    gap: 20px;
+}
+footer > .info > .img > img {
     object-fit: contain;
 }
 
@@ -19,16 +28,36 @@ footer > .info > img {
     position: absolute;
     bottom: 0;
     width: 100%;
-    padding: 10px;
-    background-color: #dddddd;
+    padding: 20px 10px;
     font-family: var(--font-L);
     font-size: 0.8rem;
-    color: var(--gray03);
+    color: var(--white);
     text-align: center;
+    background-color: var(--blue);
+}
+
+footer::before,
+.mainFooter::before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background-color: var(--yellow);
 }
 
 
-
+@media screen and (max-width: 1040px) {
+    footer > .info > p > .lineBreak {
+        display: inline;
+    }
+    footer > .info > p > .lineBreak::before {
+        content: '｜';
+        display: inline;
+    }
+}
 
 /* 태블릿 */
 

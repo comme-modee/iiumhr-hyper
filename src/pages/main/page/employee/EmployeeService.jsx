@@ -104,7 +104,7 @@ const EmployeeService = () => {
                             <p className={styles.quotes}>”</p>
                         </div>
                         <div className={styles.img}>
-                            <img src={img} alt='' width={420} />
+                            <img src={img} alt=''/>
                         </div>
                     </div>
                 </FullpageSection>
@@ -177,6 +177,7 @@ const EmployeeService = () => {
                 <FullpageSection>
                     <div className={classNames(styles.sec4, commonStyles.flexCenter)}>
                         <Contact 
+                            type={'employee'}
                             isOpenPrivacyPolicy={isOpenPrivacyPolicy}
                             setIsOpenPrivacyPolicy={setIsOpenPrivacyPolicy}
                         />

@@ -60,5 +60,18 @@
         width: 100%;
         height: 50%;
         padding: 20px;
+        font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 480px) {
+    .mapContainer > .info {
+        font-size: 1rem;
+    }
+    .mapContainer > .info > div > p {
+        width: calc(100% - 30px);
+    }
+    .mapContainer > .info > div > .icon {
+        width: 30px;
+        height: 30px;
     }
 }

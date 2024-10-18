@@ -107,18 +107,20 @@
     align-items: center;
     justify-content: space-between;
     padding: 24px 0px;
+    word-break: keep-all;
 }
 .sec3top .category > div > .content > p:nth-child(1) { 
     font-family: var(--font-M);
     font-size: 1.4rem;
     color: var(--black);
-    /* padding-bottom: 10px; */
 }
 .sec3top .category > div > .content > p:nth-child(2) { 
     font-family: var(--font-R);
     font-size: 1rem;
     color: var(--gray02);
-    /* padding-bottom: 10px; */
+}
+.sec3top .category > div > .content .lineBreak {
+    display: block;
 }
 .sec3bottom {
     width: 100%;
@@ -228,6 +230,11 @@
 
 /* 태블릿 */
 
+@media screen and (max-width: 1200px) {
+    .sec3top .category {
+        gap: 20px;
+    }
+}
 @media screen and (max-width: 1024px) {
     .sec2 span {
         font-size: 2.4rem;
@@ -241,6 +248,22 @@
     }
     .sec2 .description {
         font-size: 1.2rem;
+    }
+}
+@media screen and (max-width: 960px) {
+    .sec3top .category > div > .content .lineBreak {
+        display: inline;
+    }
+}
+@media screen and (max-width: 860px) {
+    .sec4 .title {
+        font-size: 3rem;
+    }
+    .sec4 .description {
+        font-size: 1.4rem;
+    }
+    .sec4 .bold {
+        font-size: 4rem;
     }
 }
 @media screen and (max-width: 768px) {
@@ -266,24 +289,24 @@
     }
     .sec3top .description {
         font-size: 1.2rem;
-    }
-    .sec3top .description {
         padding: 10px 0 40px 0;
         word-break: keep-all;
     }
     .sec3top .category {
-        gap: 14px;
+        gap: 10px;
     }
     .sec3top .category > div {
         height: 300px;
     }
     .sec3top .category > div > .content {
-        padding: 20px 0px;
+        padding: 16px 6px;
     }
     .sec3top .category > div > .content > p:nth-child(1) {
+        font-size: 1.2rem;
         padding-bottom: 0px;
     }
     .sec3top .category > div > .content > p:nth-child(2) { 
+        font-size: 0.8rem;
         padding-bottom: 0px;
     }
 
@@ -300,14 +323,18 @@
     }
 
     .sec4 .title {
-        font-size: 2rem;
+        font-size: 2.5rem;
         padding-bottom: 4px;
     }
     .sec4 .description {
         font-size: 1.2rem;
     }
+    .sec4 .description > span::before {
+        width: 3px;
+        height: 3px;
+    }
     .sec4 .bold {
-        font-size: 2.5rem;
+        font-size: 3rem;
         padding: 10px 0px 30px 0px;
     }
     .sec4 .content {
@@ -334,6 +361,50 @@
 
 /* 모바일 */
 
+@media screen and (max-width: 700px) {
+    .sec3top .category {
+        flex-direction: column;
+    }
+    .sec3top .category > div {
+        display: flex;
+        height: 120px;
+    }
+    .sec3top .category > div > .img { 
+        width: 40%; 
+        height: 100%; 
+    }
+    .sec3top .category > div > .content {
+        position: relative;
+        justify-content: center;
+        gap: 4px;
+        width: 60%;
+        height: 100%;
+        padding: 0px 40px 0px 10px;
+    }
+    .sec3top .category > div > .content > p:nth-child(2) { 
+        font-size: 1rem;
+    }
+}
+@media screen and (max-width: 580px) {
+    .sec4 .title {
+        font-size: 7vw;
+    }
+    .sec4 .description {
+        font-size: 4.5vw;
+        word-break: keep-all;
+    }
+    .sec4 .bold {
+        font-size: 8vw;
+    }
+    .sec4 .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .sec4 .content > div {
+        max-width: 100%;
+        height: 360px;
+    }
+}
 @media screen and (max-width: 520px) {
     .sec1 .description .lineBreak {
         display: inline;
@@ -376,25 +447,6 @@
     .sec3top .description {
         font-size: 4.5vw;
     }
-    .sec3top .category {
-        flex-direction: column;
-    }
-    .sec3top .category > div {
-        display: flex;
-        height: 120px;
-    }
-    .sec3top .category > div > .img { 
-        width: 40%; 
-        height: 100%; 
-    }
-    .sec3top .category > div > .content {
-        position: relative;
-        justify-content: center;
-        gap: 4px;
-        width: 60%;
-        height: 100%;
-        padding: 0px 30px 0px 0px;
-    }
     .sec3top .category > div > .content > p:nth-child(1) {
         font-size: 1rem;
     }
@@ -404,25 +456,6 @@
 
     .sec3bottom > div {
         flex-direction: column;
-    }
-
-    .sec4 .title {
-        font-size: 7vw;
-    }
-    .sec4 .description {
-        font-size: 4.5vw;
-        word-break: keep-all;
-    }
-    .sec4 .bold {
-        font-size: 8vw;
-    }
-    .sec4 .content {
-        flex-direction: column;
-        align-items: center;
-    }
-    .sec4 .content > div {
-        max-width: 100%;
-        height: 360px;
     }
 
     .sec6 > div > div {
