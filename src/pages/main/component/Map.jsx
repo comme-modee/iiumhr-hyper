@@ -1,8 +1,6 @@
 import React from 'react'
 import styles from '../style/Map.module.css'
 import commonStyles from '../style/Common.module.css'
-import { useEffect } from 'react';
-import { useRef } from 'react';
 import { useCallback } from 'react';
 import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
 import { useState } from 'react';
@@ -65,7 +63,7 @@ const Map = () => {
                 <div>
                     <div className={styles.icon}></div>
                     <p>
-                        회사주소 : (10403) 경기도 고양시 일산동구 정발산로 24,<br />
+                        회사주소 : (10403) 경기도 고양시 일산동구 정발산로 24,<span className={styles.lineBreak}> </span>
                         3동 512호, 513호 (장항동, 웨스턴타워)
                     </p>
                 </div>

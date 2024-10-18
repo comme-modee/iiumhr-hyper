@@ -13,24 +13,31 @@
 }
 .sec1 .title {
     font-family: var(--font-B);
-    font-size: 2.5rem;
-    padding-bottom: 16px;
+    font-size: 3.5rem;
 }
-.sec1 .title > span {
+.sec1 .title > p:nth-child(2) {
+    padding-bottom: 30px;
+}
+.sec1 .title > p:nth-child(3) {
+    font-size: 3rem;
+    padding-bottom: 10px;
+}
+.sec1 .title > p > span {
     color: var(--yellow)
 }
 .sec1 .description {
     font-family: var(--font-R);
-    font-size: 1.4rem;
+    font-size: 1.92rem;
 }
 .sec1 .description .lineBreak {
     display: block;
 }
 
 
-.sec2 > div {
+.sec2 {
     display: flex;
-    gap: 30px;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .sec2 span {
     color: var(--yellow);
@@ -38,8 +45,8 @@
 .sec2 .quotes {
     color: var(--yellow);
     display: block;
-    padding-top: 16px;
-    font-size: 3rem;
+    transform: translateY(14px);
+    font-size: 4rem;
 }
 .sec2 .lineBreak {
     display: block;
@@ -47,35 +54,35 @@
 
 .sec2 .title {
     color: var(--black);
-    font-size: 2rem;
+    font-size: 3.5rem;
     font-family: var(--font-B);
-    line-height: 2.8rem;
-    padding-bottom: 16px;
     white-space: nowrap;
+    padding-top: 50px;
 }
-.sec2 > div > .img {
-    padding-top: 30px;
-}
-.sec2 > div > .img > img {
+.sec2 .img {
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    object-position: bottom;
 }
+.sec2 > .img > img {
+    width: fit-content;
+    height: 100%;
+    object-fit: cover;
+}
+
 
 
 
 .sec3 {
     background: url('../../assets/img/employee/service003.png') no-repeat center/cover;
 }
-.sec3 .description {
-    font-family: var(--font-R);
-    font-size: 1.6rem;
-}
 .sec3 .title {
     font-family: var(--font-B);
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     padding: 4px 0 50px 0;
+}
+.sec3 .description {
+    font-family: var(--font-R);
+    font-size: 2.4rem;
 }
 .sec3 .category {
     display: flex;
@@ -85,12 +92,12 @@
 }
 .sec3 .category > div {
     width: 100%;
-    height: 300px;
+    height: 400px;
     background-color: var(--white);
 }
 .sec3 .category > div > .img {
     width: 100%;
-    height: 50%;
+    height: 45%;
     overflow: hidden;
 }
 .sec3 .category > div > .img > img {
@@ -104,24 +111,28 @@
 
 .sec3 .category > div > .content {
     width: 100%;
-    height: 50%;
+    height: 55%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 18px 0px;
+    padding: 30px 10px;
 }
 .sec3 .category > div > .content > p:nth-child(1) { 
     font-family: var(--font-M);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--black);
 }
 .sec3 .category > div > .content > p:nth-child(2) { 
     font-family: var(--font-R);
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: var(--gray02);
     padding-bottom: 6px;
 }
+.sec3 .category > div > .content .lineBreak {
+    display: block;
+}
+
 
 .sec4 {
     background-color: var(--yellow);
@@ -139,6 +150,11 @@
 
 /* 태블릿 */
 
+@media screen and (max-width: 1200px) {
+    .sec3 .category > div > .content .lineBreak {
+        display: inline;
+    }
+}
 @media screen and (max-width: 768px) {
     .sec1 {
         padding: 60px 20px 0px 20px;

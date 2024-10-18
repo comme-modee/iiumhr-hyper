@@ -13,7 +13,13 @@
 
 .layout {
     width: 100%;
-    max-width: 940px;
+    max-width: 960px;
+    margin: 0 auto;
+}
+
+.layout1200 {
+    width: 100%;
+    max-width: 1200px;
     margin: 0 auto;
 }
 

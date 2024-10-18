@@ -6,6 +6,7 @@ import {
 } from '@shinyongjun/react-fullpage';
 import '@shinyongjun/react-fullpage/css';
 import classNames from 'classnames'
+import { motion } from 'framer-motion';
 
 //css
 import styles from '../../style/business/BusinessService.module.css'
@@ -39,13 +40,45 @@ const BusinessService = () => {
             >
                 <FullpageSection>
                     <div className={classNames(styles.sec1, commonStyles.flexCenter)}>
-                        <p className={styles.title}>
-                            <span>사업자</span> 분들께 <span>노무법인 이음</span>은 <span>‘최고의 파트너’</span> 입니다.
-                        </p>
-                        <p className={styles.description}>
+                        <div className={styles.title}>
+                            <motion.p
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{
+                                    ease: 'easeInOut',
+                                    duration: 0.5
+                                }}
+                            >
+                                <span>사업자</span> 분들께 <span>노무법인 이음</span>은
+                            </motion.p>
+                            <motion.p
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                viewport={{ once: true }}
+                                transition={{
+                                    ease: 'easeInOut',
+                                    duration: 0.5,
+                                    delay: 0.1
+                                }}
+                            >
+                                <span>‘최고의 파트너’</span> 입니다.
+                            </motion.p>
+                        </div>
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true }}
+                            transition={{
+                                ease: 'easeInOut',
+                                duration: 0.5,
+                                delay: 0.2
+                            }}
+                            className={styles.description}
+                        >
                             근로계약서 작성과 취업규칙 등 기본이 되는 인사관리 업무부터<span className={styles.lineBreak}> </span>
                             노동부 신고 대응 및 산재 처리등의 노동 사건을 함께 해결해 나아가는 파트너로서 최선을 다합니다.
-                        </p>
+                        </motion.div>
                     </div>
                 </FullpageSection>
                 <FullpageSection>
@@ -65,7 +98,7 @@ const BusinessService = () => {
                 <FullpageSection>
                     <div className={classNames(styles.sec3, commonStyles.flexCenter)}>
                         <div className={classNames(styles.sec3top, commonStyles.flexCenter)}>
-                            <div className={commonStyles.layout}>
+                            <div className={commonStyles.layout1200}>
                                 <p className={styles.title}>
                                     노무법인 이음은 최고의 파트너입니다.
                                 </p>
@@ -149,7 +182,7 @@ const BusinessService = () => {
                             </div>
                         </div>
                         <div className={classNames(styles.sec3bottom, commonStyles.flexCenter)}>
-                            <div className={commonStyles.layout}>
+                            <div className={commonStyles.layout1200}>
                                 <div className={commonStyles.flexCenter}>
                                     <div className={styles.img}></div>
                                     <div className={styles.content}>
@@ -177,12 +210,12 @@ const BusinessService = () => {
                 </FullpageSection>
                 <FullpageSection>
                     <div className={classNames(styles.sec4, commonStyles.flexCenter)}>
-                        <div className={commonStyles.layout}>
+                        <div className={commonStyles.layout1200}>
                             <p className={styles.title}>
                                 노무법인 이음이 <span>약속</span> 드립니다.
                             </p>
                             <p className={styles.description}>
-                                대표 노무사가 신속하게 직접 처리하고 끝까지 책임지겠습니다.
+                                대표 노무사가 신속하게 <span>직</span><span>접</span> 처리하고 끝까지 책임지겠습니다.
                             </p>
                             <p className={styles.bold}>[ 믿음이 가는 세 가지 약속 ]</p>
                             <div className={styles.content}>

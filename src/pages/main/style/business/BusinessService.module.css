@@ -13,15 +13,15 @@
 }
 .sec1 .title {
     font-family: var(--font-B);
-    font-size: 2.5rem;
-    padding-bottom: 16px;
+    font-size: 3.5rem;
+    padding-bottom: 30px;
 }
-.sec1 .title > span {
+.sec1 .title > p > span {
     color: var(--yellow);
 }
 .sec1 .description {
     font-family: var(--font-R);
-    font-size: 1.4rem;
+    font-size: 1.8rem;
 }
 .sec1 .description .lineBreak {
     display: block;
@@ -34,9 +34,7 @@
 .sec2 .quotes {
     font-size: 3rem;
     color: var(--yellow);
-}
-.sec2 .quotes:nth-child(1) {
-    transform: translateY(16px);
+    transform: translateY(12px);
 }
 .sec2 .lineBreak1,
 .sec2 .lineBreak3 {
@@ -46,7 +44,7 @@
     color: var(--black);
     font-size: 2rem;
     font-family: var(--font-B);
-    padding-bottom: 16px;
+    padding-bottom: 30px;
 }
 .sec2 .description {
     color: var(--gray02);
@@ -68,11 +66,11 @@
 }
 .sec3top .title {
     font-family: var(--font-B);
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 .sec3top .description {
     font-family: var(--font-R);
-    font-size: 1.4rem;
+    font-size: 1.8rem;
     padding: 16px 0 50px 0;
 }
 .sec3top .category {
@@ -82,7 +80,7 @@
 }
 .sec3top .category > div {
     width: 100%;
-    height: 360px;
+    height: 400px;
     background-color: var(--white);
 }
 
@@ -108,19 +106,19 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    padding: 30px 0px;
+    padding: 24px 0px;
 }
 .sec3top .category > div > .content > p:nth-child(1) { 
     font-family: var(--font-M);
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     color: var(--black);
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
 }
 .sec3top .category > div > .content > p:nth-child(2) { 
     font-family: var(--font-R);
-    font-size: 0.8rem;
+    font-size: 1rem;
     color: var(--gray02);
-    padding-bottom: 10px;
+    /* padding-bottom: 10px; */
 }
 .sec3bottom {
     width: 100%;
@@ -130,7 +128,7 @@
 .sec3bottom > div {
     gap: 30px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
 }
 .sec3bottom > div > div > .img {
     width: 80px;
@@ -155,7 +153,7 @@
 }
 .sec4 .title {
     font-family: var(--font-B);
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     padding-bottom: 8px;
     color: var(--black);
 }
@@ -165,21 +163,37 @@
 .sec4 .description {
     color: var(--gray02);
     font-family: var(--font-R);
-    font-size: 1.4rem;
+    font-size: 1.8rem;
+}
+.sec4 .description > span {
+    position: relative;
+}
+.sec4 .description > span::before {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: var(--gray02);
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
 }
 .sec4 .bold {
     color: var(--yellow);
     font-family: var(--font-B);
-    font-size: 3.5rem;
+    font-size: 4.5rem;
     padding: 20px 0px 40px 0px;
 }
 .sec4 .content {
     display: flex;
+    justify-content: center;
     gap: 30px;
 }
 .sec4 .content > div {
-    width: 300px;
-    height: 360px;
+    width: 400px;
+    height: 460px;
 }
 .sec4 .content > div > .img {
     width: 100%;
@@ -238,7 +252,7 @@
     }
 
     .sec1 .title {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
     .sec1 .description {
         font-size: 1.2rem;
