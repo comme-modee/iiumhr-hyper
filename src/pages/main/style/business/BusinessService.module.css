@@ -4,7 +4,7 @@
 .sec1, .sec2 {
     padding: 90px 20px 0px 20px;
 }
-.sec3, .sec4, .sec5, .sec6 {
+.sec4, .sec5 {
     padding: 90px 0px 0px 0px;
 }
 .sec1 {
@@ -23,17 +23,24 @@
     font-family: var(--font-R);
     font-size: 1.4rem;
 }
+.sec1 .description .lineBreak {
+    display: block;
+}
 
 
 .sec2 {
     background: url('../../assets/img/business/service002.png') no-repeat center 40px/cover;
 }
-.sec2 span {
+.sec2 .quotes {
     font-size: 3rem;
     color: var(--yellow);
 }
-.sec2 span:nth-child(1) {
+.sec2 .quotes:nth-child(1) {
     transform: translateY(16px);
+}
+.sec2 .lineBreak1,
+.sec2 .lineBreak3 {
+    display: block;
 }
 .sec2 .title {
     color: var(--black);
@@ -57,7 +64,7 @@
     background: url('../../assets/img/business/service008.png') no-repeat center/cover;
 }
 .sec3top > div {
-    padding: 50px 0px;
+    padding: 140px 0px 50px 0px;
 }
 .sec3top .title {
     font-family: var(--font-B);
@@ -141,7 +148,6 @@
 }
 
 .sec4 {
-    /* height: 100%; */
     background-color: var(--white);
 }
 .sec4 > div {
@@ -202,6 +208,9 @@
 .sec6 > div {
     height: 100%;
 }
+.sec6 > div > div:nth-child(2) {
+    padding-top: 90px;
+}
 
 /* 태블릿 */
 
@@ -224,7 +233,7 @@
     .sec1, .sec2 {
         padding: 60px 20px 0px 20px;
     }
-    .sec3, .sec4, .sec5, .sec6 {
+    .sec4, .sec5 {
         padding: 60px 0px 0px 0px;
     }
 
@@ -235,6 +244,9 @@
         font-size: 1.2rem;
     }
 
+    .sec3top > div {
+        padding: 90px 0px 50px 0px;
+    }
     .sec3top .title {
         font-size: 2rem;
     }
@@ -298,12 +310,21 @@
         height: 80px;
         font-size: 1.2rem;
     }
+
+    .sec6 > div > div:nth-child(2) {
+        padding-top: 0px;
+    }
 }
 
 
 
 /* 모바일 */
 
+@media screen and (max-width: 520px) {
+    .sec1 .description .lineBreak {
+        display: inline;
+    }
+}
 @media screen and (max-width: 480px) {
     .sec1 .title {
         font-size: 7vw;
@@ -318,6 +339,9 @@
     .sec2 span {
         font-size: 2.5rem;
     }    
+    .sec2 .lineBreak2 {
+        display: block;
+    }
     .sec2 .title {
         font-size: 6vw;
         line-height: 8vw;
@@ -328,6 +352,9 @@
     
     .sec3top {
         height: auto;
+    }
+    .sec3top > div {
+        padding: 120px 0px 60px 0px;
     }
     .sec3top .title {
         font-size: 6vw;

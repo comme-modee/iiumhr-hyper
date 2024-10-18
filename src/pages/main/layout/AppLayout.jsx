@@ -6,10 +6,12 @@ import Contact from '../component/Contact';
 import Map from '../component/Map';
 import commonStyles from '../style/Common.module.css';
 import { AuthProvider, UserInfoProvider } from '@/common/context';
+import ScrollToTopBtn from '../component/ScrollToTopBtn';
 
 const AppLayout = ({ children }) => {
     const location = useLocation();
-    const [isTablet, setIsTablet] = useState(window.innerWidth <= 768);
+    const [ isTablet, setIsTablet ] = useState(window.innerWidth <= 768);
+    const [ isOpenPrivacyPolicy, setIsOpenPrivacyPolicy ] = useState(false);
 
     const isMainPath = location.pathname === '/';
     const isIntroPath = location.pathname.includes('intro');
@@ -54,17 +56,23 @@ const AppLayout = ({ children }) => {
         (isMainPath || isIntroPath || isBusinessPath || isEmployeePath)
         ?
         <div className={commonStyles.textCenter}>
+            {!isMainPath && <ScrollToTopBtn/>}
             <Header type={isMainPath && 'main'} />
 
             {children}
 
             {!isMainPath &&
                 <>
-                    <Contact type={contactType} />
+                    <Contact 
+                        type={contactType} 
+                        isOpenPrivacyPolicy={isOpenPrivacyPolicy}
+                        setIsOpenPrivacyPolicy={setIsOpenPrivacyPolicy}
+                    />
                     <Map />
                 </>
             }
             <Footer type={isMainPath && 'main'} />
+
         </div>
         :
         isFullPagePath

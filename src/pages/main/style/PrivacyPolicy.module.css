@@ -1,0 +1,76 @@
+.privacyPolicy {
+    position: fixed;
+    z-index: 999;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); */
+    width: 90%;
+    max-width: 1200px;
+    height: 90%;
+    background-color: #fff;
+    padding: 40px;
+    /* margin-top: 50px; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease;
+    text-align: justify;
+    color: var(--blue);
+}
+.privacyPolicy > .header {
+    font-family: var(--font-B);
+    font-size: 1.8rem;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+.privacyPolicy > .header > .closeBtn {
+    cursor: pointer;
+}
+.privacyPolicy > .innerText {
+    font-family: var(--font-L);
+    font-size: 1rem;
+    line-height: 1.6rem;
+    height: calc(100% - 80px);
+    overflow-y: auto;
+}
+.privacyPolicy > .innerText > .title {
+    font-family: var(--font-M);
+    font-size: 1.1rem;
+    margin-top: 20px;
+}
+.privacyPolicy > .innerText > p {
+    margin-bottom: 8px;
+}
+.privacyPolicy > .innerText > ul {
+    font-size: 0.9rem;
+    line-height: 1.4rem;
+    padding-left: 2rem;
+    margin-bottom: 14px;
+}
+.privacyPolicy > .innerText > ul > li {
+    list-style-type: disc;
+}
+.privacyPolicy > .innerText > ol {
+    padding-left: 0.6rem;
+}
+.privacyPolicy > .innerText > ol > li,
+.privacyPolicy > .innerText > ol > .custom > li {
+    display: flex;
+    gap: 6px;
+}
+.privacyPolicy > .innerText > ol > .custom {
+    padding-left: 1.2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .privacyPolicy { padding: 30px; }
+    .privacyPolicy > .header { padding-bottom: 20px; font-size: 1.6rem; }
+    .privacyPolicy > .innerText { height: calc(100% - 60px); }
+}
+
+@media screen and (max-width: 480px) {
+    .privacyPolicy { height: 80%; padding: 20px; transform: translateY(-50px); }
+    .privacyPolicy > .header { padding-bottom: 10px; font-size: 1.4rem; }
+    .privacyPolicy > .innerText { height: calc(100% - 40px); }
+}

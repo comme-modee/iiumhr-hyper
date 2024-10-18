@@ -55,7 +55,7 @@
     display: flex;
 }
 .modal-inner > span:nth-child(1) { display: inline-block; width: 17%; }
-.modal-inner > span:nth-child(2) { display: inline-block; width: 83%; text-align: justify; }
+.modal-inner > span:nth-child(2) { display: inline-block; width: 83%; text-align: justify; word-break: break-all; }
 
 
 @media screen and (max-width: 980px) {

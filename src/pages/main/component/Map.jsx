@@ -1,11 +1,57 @@
 import React from 'react'
 import styles from '../style/Map.module.css'
+import commonStyles from '../style/Common.module.css'
+import { useEffect } from 'react';
+import { useRef } from 'react';
+import { useCallback } from 'react';
+import { GoogleMap, Marker, useJsApiLoader } from '@react-google-maps/api';
+import { useState } from 'react';
+import { Spinner } from '@/components';
+import classNames from 'classnames';
+
+const containerStyle = {
+    width: '100%',
+    height: '100%'
+};
+const companyLocation = { lat: 37.6547758, lng: 126.7726419 };
+const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
 
 const Map = () => {
+    const { isLoaded } = useJsApiLoader({
+        id: 'google-map-script',
+        googleMapsApiKey: apiKey,
+    })
+    
+    const [map, setMap] = useState(null)
+    
+    const onLoad = useCallback(function callback(map) {
+        const bounds = new window.google.maps.LatLngBounds(companyLocation)
+        map.fitBounds(bounds)
+    
+        setMap(map)
+    }, [])
+    
+    const onUnmount = useCallback(function callback(map) {
+        setMap(null)
+    }, [])
+
     return (
         <div className={styles.mapContainer}>
-            <div className={styles.map}>
-
+            <div className={classNames(styles.map, commonStyles.flexCenter)}>
+                {isLoaded ? (
+                    <GoogleMap
+                        mapContainerStyle={containerStyle}
+                        center={companyLocation}
+                        zoom={20}
+                        onLoad={onLoad}
+                        onUnmount={onUnmount}
+                    >
+                        <Marker
+                            position={companyLocation}
+                            map={map}
+                        />
+                    </GoogleMap>
+                ) : <Spinner color='primary' size='md' className='m-auto'/>}
             </div>
             <div className={styles.info}>
                 <div>
