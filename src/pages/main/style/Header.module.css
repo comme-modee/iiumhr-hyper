@@ -1,5 +1,6 @@
 .mainHeader {
     position: absolute;
+    z-index: 9997;
     width: 100vw;
     top: 0;
     padding: 30px;

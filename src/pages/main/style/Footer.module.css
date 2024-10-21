@@ -26,6 +26,7 @@ footer > .info > .img > img {
 
 .mainFooter {
     position: absolute;
+    z-index: 99;
     bottom: 0;
     width: 100%;
     padding: 20px 10px;

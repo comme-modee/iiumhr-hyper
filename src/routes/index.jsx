@@ -21,6 +21,12 @@ import ErrorPages from "@/pages/error";
 import ErrorPageNotFound from "@/pages/error/PageNotFound";
 import { useEffect } from "react";
 
+import Main1 from '@/pages/main/page/videoMain/Main1'
+import Main2 from '@/pages/main/page/videoMain/Main2'
+import Main3 from '@/pages/main/page/videoMain/Main3'
+import Main4 from '@/pages/main/page/videoMain/Main4'
+import Main5 from '@/pages/main/page/videoMain/Main5'
+
 export default function AppRoutes() {
 	const location = useLocation();
 
@@ -33,6 +39,11 @@ export default function AppRoutes() {
 			<ReactRoutes>
 				<Route>
 					<Route path='/' element={<Main />} />
+					<Route path='/index1' element={<Main1 />} />
+					<Route path='/index2' element={<Main2 />} />
+					<Route path='/index3' element={<Main3 />} />
+					<Route path='/index4' element={<Main4 />} />
+					<Route path='/index5' element={<Main5 />} />
 					<Route path='/intro' element={<Intro />} />
 					<Route path='/business'>
 						<Route index element={<BusinessService />} />
