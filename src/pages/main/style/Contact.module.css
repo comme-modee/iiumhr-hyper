@@ -26,7 +26,7 @@
 }
 .contact > div > form ::placeholder{
     text-align: center;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-family: var(--font-M);
     color: var(--gray01);
 }
@@ -44,7 +44,7 @@
 }
 .contact > div > form > .formRow > input::placeholder{
     position: relative;
-    top: 30%;
+    top: 25%;
     left: 50%;
     transform: translate(-50%, -50%);
 }

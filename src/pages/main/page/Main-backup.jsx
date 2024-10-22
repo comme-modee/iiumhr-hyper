@@ -1,11 +1,10 @@
 import React, { useEffect } from 'react';
 import classNames from 'classnames';
-import styles from '../style/Main.module.css';
+import mainStyles from '../style/Main.module.css';
 import commonStyles from '../style/Common.module.css';
 import { useNavigate } from 'react-router-dom';
-import video from '../assets/video/video-2.mp4'
 
-const Main1 = () => {
+const Main = () => {
     const navigate = useNavigate();
 
     const setVh = () => {
@@ -23,16 +22,16 @@ const Main1 = () => {
     })
 
     return (
-        <div className={classNames(styles.mainContainer, commonStyles.flexCenter)}>
-            <div className={styles.titleContainer}>
-                <div className={styles.sub}>
+        <div className={classNames(mainStyles.bg, commonStyles.flexCenter)}>
+            <div className={mainStyles.titleContainer}>
+                <div className={mainStyles.sub}>
                     사업자와 근로자 <span>모두를 위한</span>
                 </div>
-                <div className={styles.main}>
-                    노무법인 <span className={styles.yellow}>이음</span>
+                <div className={mainStyles.main}>
+                    노무법인 <span className={mainStyles.yellow}>이음</span>
                 </div>
             </div>
-            <div className={styles.buttonContainer}>
+            <div className={mainStyles.buttonContainer}>
                 <button
                     onClick={() => navigate('/business')}
                     aria-label="사업자 서비스로 이동"
@@ -46,21 +45,9 @@ const Main1 = () => {
                     근로자 서비스
                 </button>
             </div>
-            <div className={styles.guideText}>원하시는 서비스를 선택해 주세요.</div>
-            <div className={styles.dimmed}></div>
-            <video
-                loop
-                autoPlay
-                muted
-                playsInline //영상이 사진처럼 글 안에서 재생되게끔 하는 속성. 안하면 페이지 로드시 영상이 자동으로 전체 모드가 된다.
-                preload="metadata"
-                // poster={MainPoster}
-                className={styles.mainVideo}
-            >
-                <source src={video} type='video/mp4'/>
-            </video>
+            <div className={mainStyles.guideText}>원하시는 서비스를 선택해 주세요.</div>
         </div>
     );
 }
 
-export default Main1;
+export default Main;

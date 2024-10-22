@@ -14,10 +14,6 @@ const AppLayout = ({ children }) => {
     const [ isOpenPrivacyPolicy, setIsOpenPrivacyPolicy ] = useState(false);
 
     const isMainPath = location.pathname === '/';
-    
-    /* video path */
-    const isVideoPath = location.pathname.includes('/index');
-
     const isIntroPath = location.pathname.includes('intro');
     const isBusinessPath = location.pathname.includes('business/');
     const isEmployeePath = location.pathname.includes('employee/');
@@ -57,15 +53,15 @@ const AppLayout = ({ children }) => {
     }, [isMainPath, isTablet, isIntroPath, isBusinessPath, isEmployeePath, isFullPagePath, isAdminPath]);
 
     return (
-        (isMainPath || isVideoPath || isIntroPath || isBusinessPath || isEmployeePath)
+        (isMainPath || isIntroPath || isBusinessPath || isEmployeePath)
         ?
         <div className={commonStyles.textCenter}>
-            {!(isMainPath || isVideoPath) && <ScrollToTopBtn/>}
-            <Header type={(isMainPath || isVideoPath) && 'main'} />
+            {!isMainPath && <ScrollToTopBtn/>}
+            <Header type={isMainPath && 'main'} />
 
             {children}
 
-            {!(isMainPath || isVideoPath) &&
+            {!isMainPath &&
                 <>
                     <Contact 
                         type={contactType} 
@@ -75,7 +71,7 @@ const AppLayout = ({ children }) => {
                     <Map />
                 </>
             }
-            <Footer type={(isMainPath || isVideoPath) && 'main'} />
+            <Footer type={isMainPath && 'main'} />
 
         </div>
         :
