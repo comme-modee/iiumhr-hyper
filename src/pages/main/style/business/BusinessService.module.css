@@ -16,6 +16,9 @@
     font-size: 3.5rem;
     padding-bottom: 30px;
 }
+.sec1 .title .bigSizeText {
+    font-size: 5.2rem;
+}
 .sec1 .title > p > span {
     color: var(--yellow);
 }
@@ -62,7 +65,7 @@
     background: url('../../assets/img/business/service008.png') no-repeat center/cover;
 }
 .sec3top > div {
-    padding: 140px 0px 50px 0px;
+    padding: 90px 0px 50px 0px;
 }
 .sec3top .title {
     font-family: var(--font-B);
@@ -71,7 +74,7 @@
 .sec3top .description {
     font-family: var(--font-R);
     font-size: 1.8rem;
-    padding: 16px 0 50px 0;
+    padding: 0px 0 30px 0;
 }
 .sec3top .category {
     padding: 0px 10px;
@@ -80,7 +83,7 @@
 }
 .sec3top .category > div {
     width: 100%;
-    height: 400px;
+    height: 360px;
     background-color: var(--white);
 }
 
@@ -93,6 +96,7 @@
     width: 100%;
     height: 100%;
     transition: all 0.3s ease-out;
+    object-fit: cover;
 }
 
 .sec3top .category > div:hover > .img > img {
@@ -124,7 +128,7 @@
 }
 .sec3bottom {
     width: 100%;
-    padding: 50px 0px;
+    padding: 30px 0px;
     background-color: #e6e6e6;
 }
 .sec3bottom > div {
@@ -151,7 +155,7 @@
     background-color: var(--white);
 }
 .sec4 > div {
-    padding: 50px 20px;
+    padding: 0px 20px;
 }
 .sec4 .title {
     font-family: var(--font-B);
@@ -201,9 +205,9 @@
     width: 100%;
     height: 74%;
 }
-.sec4 .content > div:nth-child(1) > .img { background: url('../../assets/img/business/service012.png') no-repeat center/cover; } 
-.sec4 .content > div:nth-child(2) > .img { background: url('../../assets/img/business/service013.png') no-repeat center/cover; } 
-.sec4 .content > div:nth-child(3) > .img { background: url('../../assets/img/business/service014.png') no-repeat center/cover; } 
+.sec4 .content > .box1 > .img { background: url('../../assets/img/business/service012.png') no-repeat center/cover; } 
+.sec4 .content > .box2 > .img { background: url('../../assets/img/business/service013.png') no-repeat center/cover; } 
+.sec4 .content > .box3 > .img { background: url('../../assets/img/business/service014.png') no-repeat center/cover; } 
 .sec4 .content > div > p {
     width: 100%;
     height: 26%;
@@ -277,6 +281,9 @@
     .sec1 .title {
         font-size: 2.5rem;
     }
+    .sec1 .title .bigSizeText {
+        font-size: 3.6rem;
+    }
     .sec1 .description {
         font-size: 1.2rem;
     }
@@ -341,7 +348,6 @@
         gap: 14px;
     }
     .sec4 .content > div {
-        width: 100%;
         height: 300px;
     }
     .sec4 .content > div > .img {
@@ -362,27 +368,41 @@
 /* 모바일 */
 
 @media screen and (max-width: 700px) {
-    .sec3top .category {
-        flex-direction: column;
+    .sec3top {
+        padding-top: 60px;
+        height: auto;
+    }
+    .sec3top > .description {
+        padding: 10px 0 20px 0;
+    }
+    .sec3top > .description > .lineBreak {
+        display: block;
     }
     .sec3top .category > div {
-        display: flex;
-        height: 120px;
+        width: 300px;
+        height: 350px;
     }
-    .sec3top .category > div > .img { 
-        width: 40%; 
-        height: 100%; 
+    .sec3top .category > div > .img {
+        height: 45%;
     }
     .sec3top .category > div > .content {
-        position: relative;
-        justify-content: center;
-        gap: 4px;
-        width: 60%;
-        height: 100%;
-        padding: 0px 40px 0px 10px;
+        height: 55%;
+        padding: 20px 10px;
+    }
+    .sec3top .category > div > .content > p:nth-child(1) { 
+        font-size: 1.4rem;
     }
     .sec3top .category > div > .content > p:nth-child(2) { 
         font-size: 1rem;
+    }
+    .sec3bottom {
+        padding: 60px 0px 0px 0px;
+    }
+    .sec3bottom > div {
+        flex-direction: column;
+    }
+    .sec4 .content > div {
+        height: 460px;
     }
 }
 @media screen and (max-width: 580px) {
@@ -401,7 +421,7 @@
         align-items: center;
     }
     .sec4 .content > div {
-        max-width: 100%;
+        width: 300px;
         height: 360px;
     }
 }
@@ -409,10 +429,19 @@
     .sec1 .description .lineBreak {
         display: inline;
     }
+    .sec3top .title {
+        font-size: 6vw;
+    }
+    .sec3top .description {
+        font-size: 4.5vw;
+    }
 }
 @media screen and (max-width: 480px) {
     .sec1 .title {
         font-size: 7vw;
+    }
+    .sec1 .title .bigSizeText {
+        font-size: 10vw;
     }
     .sec1 .description {
         font-size: 4vw;
@@ -421,41 +450,18 @@
     .sec2 {
         background: none;
     }
-    .sec2 span {
-        font-size: 2.5rem;
+    .sec2 .quotes {
+        font-size: 4rem;
     }    
     .sec2 .lineBreak2 {
         display: block;
     }
     .sec2 .title {
-        font-size: 6vw;
-        line-height: 8vw;
+        font-size: 8vw;
+        line-height: 12vw;
     }
     .sec2 .description {
-        font-size: 4.5vw;
-    }
-    
-    .sec3top {
-        height: auto;
-    }
-    .sec3top > div {
-        padding: 120px 0px 60px 0px;
-    }
-    .sec3top .title {
-        font-size: 6vw;
-    }
-    .sec3top .description {
-        font-size: 4.5vw;
-    }
-    .sec3top .category > div > .content > p:nth-child(1) {
-        font-size: 1rem;
-    }
-    .sec3top .category > div > .content > p:nth-child(2) { 
-        font-size: 0.75rem;
-    }
-
-    .sec3bottom > div {
-        flex-direction: column;
+        font-size: 5vw;
     }
 
     .sec6 > div > div {

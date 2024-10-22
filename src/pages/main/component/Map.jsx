@@ -12,7 +12,7 @@ const containerStyle = {
     height: '100%'
 };
 const companyLocation = { lat: 37.6547758, lng: 126.7726419 };
-const apiKey = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
+const apiKey = 'AIzaSyALpguadc1id8kc4_SXduAg6zT01jqX4PU';
 
 const Map = () => {
     const { isLoaded } = useJsApiLoader({

@@ -4,6 +4,9 @@
     text-align: center;
     padding: 100px 20px;
 }
+.fullpageContact {
+    padding: 0px 20px;
+}
 .contact .title {
     font-family: var(--font-B);
     font-size: 3.7rem;
@@ -126,7 +129,12 @@
         gap: 16px;
     }
     .contact .title {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        line-height: 3rem;
+        padding-bottom: 10px;
+    }
+    .contact .title .lineBreak {
+        display: block;
     }
     .contact .description {
         font-size: 1.2rem;
@@ -151,7 +159,7 @@
         gap: 10px;
     }
     .contact > div > form textarea {
-        height: 200px;
+        height: 120px;
     }
     .contact > div > form ::placeholder{
         font-size: 1rem;

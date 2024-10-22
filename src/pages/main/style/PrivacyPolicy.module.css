@@ -70,7 +70,7 @@
 }
 
 @media screen and (max-width: 480px) {
-    .privacyPolicy { height: 80%; padding: 20px; transform: translateY(-50px); }
+    .privacyPolicy { height: 80%; padding: 20px; }
     .privacyPolicy > .header { padding-bottom: 10px; font-size: 1.4rem; }
     .privacyPolicy > .innerText { height: calc(100% - 40px); }
 }

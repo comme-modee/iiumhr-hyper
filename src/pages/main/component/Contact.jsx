@@ -6,11 +6,15 @@ import { contactApi } from '@/common/api';
 import { useNotificationContext } from '@/common/context';
 import { motion } from 'framer-motion';
 import PrivacyPolicy from './privacyPolicy';
+import { useLocation } from 'react-router-dom';
 
 const Contact = ({ type, isOpenPrivacyPolicy, setIsOpenPrivacyPolicy }) => {
+    const location = useLocation();
+
     const isBusiness = type === 'business';
     const isEmployee = type === 'employee';
     const { showNotification } = useNotificationContext();
+    const isFullpagePath = location.pathname === '/business' || location.pathname === '/employee';
     
     const inquiry = async (e) => {
         e.preventDefault();
@@ -42,7 +46,7 @@ const Contact = ({ type, isOpenPrivacyPolicy, setIsOpenPrivacyPolicy }) => {
     return (
         <React.Fragment>
             <PrivacyPolicy isOpenPrivacyPolicy={isOpenPrivacyPolicy} setIsOpenPrivacyPolicy={setIsOpenPrivacyPolicy}/>
-            <div className={classNames(styles.contact, commonStyles.flexCenter)}>
+            <div className={classNames(styles.contact, commonStyles.flexCenter, isFullpagePath && styles.fullpageContact)}>
                 <div className={commonStyles.layout}>
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -54,7 +58,7 @@ const Contact = ({ type, isOpenPrivacyPolicy, setIsOpenPrivacyPolicy }) => {
                         }}
                         className={styles.title}
                     >
-                        {isBusiness ? '노무 업무에 관한 모든 것을 함께 합니다.' :
+                        {isBusiness ? <>노무 업무에 관한<span className={styles.lineBreak}> </span>모든 것을 함께 합니다.</> :
                             isEmployee ? <>기본적인 권리!<span className={styles.lineBreak}> </span>스스로 지켜야 합니다.</> :
                                 '여러분의 최고의 파트너 노무법인 이음'}
                     </motion.div>

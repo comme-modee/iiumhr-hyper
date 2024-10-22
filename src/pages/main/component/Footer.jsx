@@ -21,7 +21,9 @@ const Footer = ({ type }) => {
                     </p>
                     <div className={footerStyles.img}>
                         <img src={Logo} alt='로고 이미지' width={80} />
-                        <img src={BlogBtn} alt='대표 블로그 바로가기' width={120} />
+                        <a href='https://blog.naver.com/iiumhr' target='_blank'>
+                            <img src={BlogBtn} alt='대표 블로그 바로가기' width={120} />
+                        </a>
                     </div>
                 </div>
             </footer>
