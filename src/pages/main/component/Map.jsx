@@ -23,8 +23,8 @@ const Map = () => {
     const [map, setMap] = useState(null)
     
     const onLoad = useCallback(function callback(map) {
-        const bounds = new window.google.maps.LatLngBounds(companyLocation)
-        map.fitBounds(bounds)
+        // const bounds = new window.google.maps.LatLngBounds(companyLocation)
+        // map.fitBounds(bounds)
     
         setMap(map)
     }, [])

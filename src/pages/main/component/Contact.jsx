@@ -5,7 +5,7 @@ import classNames from 'classnames';
 import { contactApi } from '@/common/api';
 import { useNotificationContext } from '@/common/context';
 import { motion } from 'framer-motion';
-import PrivacyPolicy from './privacyPolicy';
+import PrivacyPolicy from './PrivacyPolicy';
 import { useLocation } from 'react-router-dom';
 
 const Contact = ({ type, isOpenPrivacyPolicy, setIsOpenPrivacyPolicy }) => {
