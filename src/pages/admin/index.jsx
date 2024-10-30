@@ -19,6 +19,7 @@ const Os = lazy(() => import('./Os/Os'));
 
 //board
 const Contact = lazy(() => import('./Contact/Contact'));
+const Sdfap = lazy(() => import('./Sdfap/Sdfap'));
 
 export default function Admin() {
 	return (
@@ -40,6 +41,7 @@ export default function Admin() {
 				<Route path="os" element={<Os />} />
 			</Route>
 			<Route path="board/*" element={<Outlet/>}>
+				<Route path="sdfap" element={<Sdfap />} />
 				<Route path="contact" element={<Contact />} />
 			</Route>
 		</Routes>

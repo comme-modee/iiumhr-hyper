@@ -82,6 +82,13 @@ const MENU_ITEMS = [
 		isTitle: true,
 	},
 	{
+		key: 'sdfap',
+		label: '체당금 월정상한액 관리',
+		isTitle: false,
+		icon: 'ri-message-2-line',
+		url: '/admin/board/sdfap',
+	},
+	{
 		key: 'contact',
 		label: '문의 관리',
 		isTitle: false,

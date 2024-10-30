@@ -1,5 +1,6 @@
-import classNames from 'classnames'
 import React from 'react'
+import { useState, useEffect } from 'react'
+import classNames from 'classnames'
 import styles from '../../style/employee/Wages.module.css'
 import commonStyles from '../../style/Common.module.css'
 import Categorys from '../../component/Categorys'
@@ -8,8 +9,24 @@ import sec6Icon2 from '../../assets/img/employee/wages005.png'
 import sec6Icon3 from '../../assets/img/employee/wages006.png'
 import graph from '../../assets/img/employee/wages007.png'
 import { motion } from 'framer-motion';
+import sdfap from '@/common/api/sdfap'
 
 const Wages = () => {
+    const [ sdfapData, setSdfapData ] = useState({});
+
+    const getSdfapData = async () => {
+        try {
+            const res = await sdfap.getSdfap();
+            setSdfapData(res.list)
+        } catch (error) {
+            console.log('error: ', error)
+        }
+    }
+
+    useEffect(() => {
+        getSdfapData(); 
+    },[])
+
     return (
         <div>
             <div className={classNames(styles.sec1, commonStyles.flexCenter)}>
@@ -223,31 +240,31 @@ const Wages = () => {
                     </div>
                     <div className={styles.row}>
                         <p>임<span></span>금</p>
-                        <p>220</p>
-                        <p>310</p>
-                        <p>350</p>
-                        <p>330</p>
-                        <p>230</p>
+                        <p>{sdfapData?.i1}</p>
+                        <p>{sdfapData?.i2}</p>
+                        <p>{sdfapData?.i3}</p>
+                        <p>{sdfapData?.i4}</p>
+                        <p>{sdfapData?.i5}</p>
                     </div>
                     <div className={styles.row}>
                         <p>퇴직급여등</p>
-                        <p>220</p>
-                        <p>310</p>
-                        <p>350</p>
-                        <p>330</p>
-                        <p>230</p>
+                        <p>{sdfapData?.t1}</p>
+                        <p>{sdfapData?.t2}</p>
+                        <p>{sdfapData?.t3}</p>
+                        <p>{sdfapData?.t4}</p>
+                        <p>{sdfapData?.t5}</p>
                     </div>
                     <div className={styles.row}>
                         <p>휴 &nbsp;업 &nbsp;수 &nbsp;당</p>
-                        <p>154</p>
-                        <p>217</p>
-                        <p>245</p>
-                        <p>231</p>
-                        <p>161</p>
+                        <p>{sdfapData?.h1}</p>
+                        <p>{sdfapData?.h2}</p>
+                        <p>{sdfapData?.h3}</p>
+                        <p>{sdfapData?.h4}</p>
+                        <p>{sdfapData?.h5}</p>
                     </div>
                     <div className={styles.row}>
                         <p>출산후 휴가기간 중 급여</p>
-                        <p>310</p>
+                        <p>{sdfapData?.e1}</p>
                     </div>
                 </motion.div>
                 <motion.div
@@ -273,11 +290,11 @@ const Wages = () => {
                     </div>
                     <div className={styles.row}>
                         <p>임금, 출산전후휴가기간 중 급여, 휴업수당</p>
-                        <p>700</p>
+                        <p>{sdfapData?.slp1}</p>
                     </div>
                     <div className={styles.row}>
                         <p>퇴직급여등</p>
-                        <p>700</p>
+                        <p>{sdfapData?.slp2}</p>
                     </div>
                     <div>* 총 상한액은 1,000만 원</div>
                 </motion.div>

@@ -1,0 +1,49 @@
+.sdfap-container .title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sdfap input {
+    text-align: center;
+    width: 100%;
+    border: 1px solid var(--ct-border-color);
+    background-color: var(--ct-secondary-bg);
+    padding: 0.4rem;
+}
+.sdfap > :not(caption) > * > * {
+    padding: 0.7rem 0.7rem;
+}
+.sdfap th,
+.sdfap td {
+    vertical-align: middle;
+}
+.sdfap1 th,
+.sdfap1 td {
+    width: calc(100% / 6);
+}
+.sdfap2 th,
+.sdfap2 td {
+    width: 50%;
+}
+.btn-container {
+    text-align: center;
+}
+.btn-container > button {
+    width: 150px;
+}
+
+@media screen and (max-width: 480px) {
+    .sdfap-container {
+        padding: 0px;
+    }
+    .sdfap-container > .card > .card-body {
+        padding: 0.5rem;
+    }
+    .sdfap .input-td {
+        padding: 0.5rem 0.2rem;
+    }
+    .sdfap1 th {
+        padding: 0.5rem 0rem;
+        font-size: 0.8rem;
+    }
+}
