@@ -10,6 +10,7 @@ import sec3Icon4 from '../../assets/img/employee/injury006.png'
 import sec3Icon5 from '../../assets/img/employee/injury007.png'
 import sec3Icon6 from '../../assets/img/employee/injury008.png'
 import sec3Icon7 from '../../assets/img/employee/injury009.png'
+import graph from '../../assets/img/employee/injury010.png'
 import { motion } from 'framer-motion';
 
 const Injury = () => {
@@ -133,7 +134,7 @@ const Injury = () => {
                     </motion.div>
                 </div>
             </div>
-            <div className={classNames(styles.sec4, commonStyles.layout)}>
+            <div className={styles.sec4}>
                 <motion.div
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -144,9 +145,9 @@ const Injury = () => {
                     }}
                     className={styles.title}
                 >
-                    산업 재해 사건 <span>적용 범위</span>
+                    산업 재해 <span>보상 처리절차</span>
                 </motion.div>
-                <motion.div
+                <motion.img
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -154,40 +155,10 @@ const Injury = () => {
                         ease: 'easeInOut',
                         duration: 1
                     }}
-                    className={styles.graph}
-                >
-                    <div>
-                        <p className={styles.vLine}>사업현장</p>
-                        <div className={styles.smallText}>
-                            <div className={styles.line}></div>
-                            <div>업무상 부상 또는 질병발생</div>
-                        </div>
-                    </div>
-                    <div>
-                        <p className={classNames(styles.yellow, styles.vLine)}>지정의료기관</p>
-                        <div className={styles.row}>
-                            <div className={styles.line}></div>
-                            <p>지정의료기관</p>
-                        </div>
-                    </div>
-                    <p className={styles.vLine}>근로복지공단</p>
-                    <p className={classNames(styles.yellow, styles.vLine)}>요양 또는 전원요양</p>
-                    <div>
-                        <p className={styles.vLine}>치유</p>
-                        <div className={classNames(styles.row, styles.row2)}>
-                            <div className={styles.line}></div>
-                            <p className={styles.yellow}>사회복귀</p>
-                        </div>
-                    </div>
-                    <p className={styles.vLine}>장해급여 청구</p>
-                    <p className={classNames(styles.yellow, styles.noMarginBottom)}>장해급여 수령</p>
-                    <div className={styles.lastSmallText}>
-                        <div className={styles.grayText}>직원훈련이 필요한 경우</div>
-                        <div>장해급여 수령</div>
-                        <div className={styles.grayText}>취업홍보 제공 등 직업상담</div>
-                    </div>
-                    <p className={styles.yellow}>사회복귀</p>
-                </motion.div>
+                    className={commonStyles.layout}
+                    src={graph}
+                    alt='그래프'
+                />
             </div>
         </div>
     )

@@ -3,7 +3,7 @@ import classNames from 'classnames';
 import styles from '../style/Main.module.css';
 import commonStyles from '../style/Common.module.css';
 import { useNavigate } from 'react-router-dom';
-import video from '../assets/video/video-2.mp4'
+import video from '../assets/video/video.mp4'
 
 const Main1 = () => {
     const navigate = useNavigate();

@@ -6,6 +6,7 @@ import Categorys from '../../component/Categorys'
 import sec2Img1 from '../../assets/img/employee/dismissal002.png'
 import sec2Img2 from '../../assets/img/employee/dismissal003.png'
 import sec2Img3 from '../../assets/img/employee/dismissal004.png'
+import graph from '../../assets/img/employee/dismissal005.png'
 import { motion } from 'framer-motion';
 
 const Dismissal = () => {
@@ -116,7 +117,7 @@ const Dismissal = () => {
                     >
                         부당해고 <span>구제 신청 처리 절차</span>
                     </motion.p>
-                    <motion.div
+                    <motion.img
                         initial={{ opacity: 0, y: 30 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
@@ -124,38 +125,10 @@ const Dismissal = () => {
                             ease: 'easeInOut',
                             duration: 1
                         }}
-                        className={styles.graph}
-                    >
-                        <div className={styles.step1}>
-                            <p>부당해고</p>
-                            <p>지방노동위원회구제신청</p>
-                            <p>사실조사·심문·판정</p>
-                            <div className={styles.leftLine}></div>
-                            <div className={styles.rightLine}></div>
-                        </div>
-                        <div className={styles.step2}>
-                            <div>
-                                <p>구제명령</p>
-                                <p>원상회복</p>
-                            </div>
-                            <div>
-                                <p>기각·각하</p>
-                                <p>중앙노동위원회재심</p>
-                                <div className={styles.leftLine}></div>
-                                <div className={styles.rightLine}></div>
-                                <div className={styles.step3}>
-                                    <div>
-                                        <p>구제명령</p>
-                                        <p>원상회복</p>
-                                    </div>
-                                    <div>
-                                        <p>기각·각하</p>
-                                        <p>행정소송</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </motion.div>
+                        className={commonStyles.layout}
+                        src={graph}
+                        alt='그래프'
+                    />
                 </div>
             </div>
         </div>

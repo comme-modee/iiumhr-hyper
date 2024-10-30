@@ -6,6 +6,7 @@ import Categorys from '../../component/Categorys'
 import sec6Icon1 from '../../assets/img/employee/wages004.png'
 import sec6Icon2 from '../../assets/img/employee/wages005.png'
 import sec6Icon3 from '../../assets/img/employee/wages006.png'
+import graph from '../../assets/img/employee/wages007.png'
 import { motion } from 'framer-motion';
 
 const Wages = () => {
@@ -73,9 +74,9 @@ const Wages = () => {
                     }}
                     className={styles.title}
                 >
-                    임금체불 사건 처리 절차
+                    임금체불 <span>사건 처리 절차</span>
                 </motion.p>
-                <motion.div
+                <motion.img
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -84,31 +85,9 @@ const Wages = () => {
                         duration: 1
                     }}
                     className={commonStyles.layout}
-                >
-                    <div className={styles.graph}>
-                        <div className={styles.type1}>
-                            <div className={styles.line}></div>
-                            <p>진<span></span>정</p>
-                            <div className={styles.line}></div>
-                        </div>
-                        <div className={styles.type2}>
-                            <p>지급(종결)</p>
-                            <p>미지급/고소</p>
-                        </div>
-                        <div className={styles.type3}>
-                            <div>
-                                <p>진정취하 (종결)</p>
-                            </div>
-                            <div>
-                                <p>처벌을 바라는 경우</p>
-                                <p>사용자 입건</p>
-                                <p>범죄사실에 대한 수사</p>
-                                <p>체불임금확정, 지급권유</p>
-                                <p>수사 결과를 검찰에 송치</p>
-                            </div>
-                        </div>
-                    </div>
-                </motion.div>
+                    src={graph}
+                    alt='그래프'
+                />
             </div>
             <div className={classNames(styles.sec5, commonStyles.layout)}>
                 <motion.p

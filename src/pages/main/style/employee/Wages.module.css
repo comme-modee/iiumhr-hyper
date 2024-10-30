@@ -54,7 +54,7 @@
 .sec4 {
     position: relative;
     padding: 60px 20px;
-    background-color: var(--blue);
+    background-color: #e6e6e6;
 }
 .sec4::before {
     content: '';
@@ -64,12 +64,16 @@
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    background-color: var(--blue);
+    background-color: #e6e6e6;
 }
 .sec4 > .title {
     font-family: var(--font-B);
-    font-size: 1.8rem;
-    padding-bottom: 30px;
+    font-size: 2.2rem;
+    padding-bottom: 50px;
+    color: var(--blue);
+}
+.sec4 > .title > span {
+    color: var(--yellow);
 }
 .sec4 > div > .graph {
     display: flex;
@@ -542,6 +546,7 @@
     }
     .sec4 > .title {
         font-size: 1.6rem;
+        padding-bottom: 30px;
     }
     .sec4 > div > .graph p {
         font-size: 1.2rem;

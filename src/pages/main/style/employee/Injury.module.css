@@ -109,145 +109,17 @@
 
 .sec4 {
     padding: 130px 0px 100px 0;
+    background-color: #e6e6e6;
 }
 .sec4 > .title {
     font-family: var(--font-B);
-    font-size: 1.8rem;
+    font-size: 2.2rem;
     color: var(--black);
-    padding-bottom: 30px;
+    padding-bottom: 50px;
 }
 .sec4 > .title > span {
     color: var(--yellow);
 }
-.sec4 > .graph > div {
-    display: flex;
-    justify-content: space-between;
-}
-.sec4 > .graph p {
-    width: 42%;
-    font-family: var(--font-B);
-    font-size: 1.6rem;
-    color: #122b43;
-    border: 4px solid #122b43;
-    padding: 10px 0px;
-    border-radius: 50px;
-    margin-bottom: 24px;
-}
-.sec4 > .graph .yellow {
-    color: var(--yellow);
-    border: 4px solid var(--yellow);
-}
-.sec4 > .graph .smallText {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    width: 60%;
-    font-family: var(--font-B);
-    font-size: 1.4rem;
-    color: #122b43;
-    text-align: right;
-    white-space: nowrap;
-    margin-bottom: 24px;
-}
-.sec4 > .graph .smallText > .line {
-    position: relative;
-    width: 100%;
-    border-top: 4px dotted #122b43;
-}
-.sec4 > .graph .smallText > .line::after {
-    content: '';
-    display: block;
-    position: absolute;
-    right: -4px;
-    top: calc(50% - 2px);
-    transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #122b43;
-}
-.sec4 > .graph .row {
-    width: 55%;
-    display: flex;
-    align-items: center;
-    margin-bottom: 24px;
-}
-.sec4 > .graph .row > .line {
-    position: relative;
-    width: 22%;
-    border-top: 4px dotted #122b43;
-}
-.sec4 > .graph .row > .line::after {
-    content: '';
-    display: block;
-    position: absolute;
-    left: -4px;
-    top: calc(50% - 2px);
-    transform: translateY(-50%);
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #122b43;
-}
-.sec4 > .graph .row > p {
-    width: 78%;
-    margin: 0;
-    white-space: nowrap;
-}
-.sec4 > .graph .row2 > .line {
-    right: 6%;
-}
-.sec4 > .graph .row2 > .line::after {
-    left: initial;
-    right: -4px;
-}
-.sec4 .vLine {
-    position: relative;
-}
-.sec4 .vLine::after {
-    content: '';
-    position: absolute;
-    bottom: -26px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: block;
-    height: 20px;
-    border-right: 4px dotted #122b43;
-}
-.sec4 > .graph > .lastSmallText {
-    width: 42%;
-    font-family: var(--font-B);
-    font-size: 1.4rem;
-    color: #122b43;
-    
-    flex-direction: column;
-    gap: 14px;
-    position: relative;
-    padding: 10px 0px;
-}
-.sec4 > .graph > .lastSmallText > .grayText {
-    position: relative;
-    transform: translateX(50%);
-    text-align: left;
-    font-family: var(--font-R);
-    color: #a8a8a8;
-    padding-left: 16px;
-}
-.sec4 > .graph > .lastSmallText > .grayText::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    left: 0;
-    display: block;
-    height: 50px;
-    border-right: 4px dotted #122b43;
-}
-
-.sec4 > .graph > .noMarginBottom {
-    margin-bottom: 0;
-}
-
 
 
 
@@ -308,16 +180,7 @@
     }
     .sec4 > .title {
         font-size: 1.6rem;
-        padding-bottom: 20px;
-    }
-    .sec4 > .graph p {
-        font-size: 1.2rem;
-    }
-    .sec4 > .graph .smallText {
-        font-size: 1.1rem;
-    }
-    .sec4 > .graph > .lastSmallText {
-        font-size: 1.1rem;
+        padding-bottom: 30px;
     }
 }
 
@@ -389,50 +252,5 @@
     }
     .sec4 > .title {
         font-size: 7vw;
-    }
-    .sec4 > .graph p {
-        font-size: 1rem;
-        border: 3px solid #122b43;
-        margin-bottom: 20px;
-        padding: 8px 0px;
-    }
-    .sec4 > .graph .yellow {
-        border: 3px solid var(--yellow);
-    }
-    .sec4 > .graph .smallText {
-        font-size: 0.8rem;
-    }
-    .sec4 > .graph .smallText > .line {
-        border-top: 3px dotted #122b43;
-    }
-    .sec4 > .graph .smallText > .line::after {
-        top: calc(50% - 1px);
-        width: 8px;
-        height: 8px;
-    }
-    .sec4 > .graph .row > .line {
-        border-top: 3px dotted #122b43;
-    }
-    .sec4 > .graph .row > .line::after {
-        top: calc(50% - 1px);
-        width: 8px;
-        height: 8px;
-    }
-    .sec4 .vLine::after {
-        bottom: -20px;
-        height: 14px;
-        border-right: 3px dotted #122b43;
-    }
-    .sec4 > .graph > .lastSmallText {
-        font-size: 0.9rem;
-        gap: 8px;
-        padding: 8px 0px;
-    }
-    .sec4 > .graph > .lastSmallText > .grayText {
-        white-space: nowrap;
-    }
-    .sec4 > .graph > .lastSmallText > .grayText::before {
-        height: 30px;
-        border-right: 3px dotted #122b43;
     }
 }
