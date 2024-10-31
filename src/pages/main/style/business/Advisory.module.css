@@ -54,6 +54,7 @@
     display: flex;
     gap: 8px;
     word-break: keep-all;
+    letter-spacing: -2px;
 }
 .sec2 > div:nth-child(1) > .content > ul > li {
     text-align: left;

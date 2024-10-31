@@ -272,6 +272,7 @@
     padding: 20px 0;
     background-color: var(--blue);
     border-radius: 24px;
+    word-break: keep-all;
 }
 .sec6 > .contentContainer > .content > div > .icon {
     width: 80px;

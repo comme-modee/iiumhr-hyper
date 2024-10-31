@@ -108,6 +108,11 @@
     object-position: -20% 30px;
     transform: scale(1.5);
 }
+.sec2 > .boxContainer > .box:nth-child(3) li {
+    display: flex;
+    gap: 8px;
+    word-break: keep-all;
+}
 
 
 

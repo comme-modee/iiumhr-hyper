@@ -39,6 +39,7 @@
     height: 100%;
     color: var(--black);
     text-align: left;
+    letter-spacing: -2px;
 }
 .sec2 > .contentContainer > .text > div > .title {
     font-family: var(--font-B);
@@ -94,6 +95,7 @@
     height: 100%;
     color: var(--black);
     text-align: right;
+    letter-spacing: -2px;
 }
 .sec3 > .contentContainer > .text > div > .title {
     font-family: var(--font-B);
@@ -131,6 +133,7 @@
     height: 100%;
     color: var(--black);
     text-align: left;
+    letter-spacing: -2px;
 }
 .sec4 > .contentContainer > .text > div > .title {
     font-family: var(--font-B);
@@ -162,46 +165,6 @@
 .sec4 > .contentContainer > .text > div > ul > li > div {
     word-break: keep-all;
 }
-
-
-/* .sec2 > .contentContainer > .text > div > ul,
-.sec3 > .contentContainer > .text > div > ul,
-.sec4 > .contentContainer > .text > div > ul {
-    counter-reset: circle 0;
-}
-.sec2 > .contentContainer > .text > div > ul > li,
-.sec3 > .contentContainer > .text > div > ul > li,
-.sec4 > .contentContainer > .text > div > ul > li {
-    position: relative;
-    padding-left: 20px;
-}
-.sec2 > .contentContainer > .text > div > ul > li::before,
-.sec3 > .contentContainer > .text > div > ul > li::before,
-.sec4 > .contentContainer > .text > div > ul > li::before {
-    position: absolute;
-    top: 0.2rem;
-    left: 0.3rem;
-    counter-increment: circle 1;
-    content: counter(circle);
-    font-size: 0.8em;
-}
-.sec2 > .contentContainer > .text > div > ul > li::after,
-.sec3 > .contentContainer > .text > div > ul > li::after,
-.sec4 > .contentContainer > .text > div > ul > li::after {
-    content: '';
-    position: absolute;
-    top: 0.3rem;
-    left: 0;
-    display: inline-block;
-    border: 1px solid #333;
-    border-radius: 50%;
-    width: 1em;
-    height: 1em;
-} */
-
-
-
-
 
 .sec5 {
     width: 100%;
@@ -240,6 +203,11 @@
     .sec2 > .contentContainer {
         height: 350px;
         margin-bottom: 60px;
+    }
+    .sec2 > .contentContainer > .text,
+    .sec3 > .contentContainer > .text,
+    .sec4 > .contentContainer > .text {
+        letter-spacing: -0.06rem;
     }
     .sec2 > .contentContainer > .text,
     .sec4 > .contentContainer > .text {

@@ -164,7 +164,7 @@ const Wages = () => {
                             <div className={styles.text}>
                                 <p className={styles.title}>사실상 도산</p>
                                 <p className={styles.description}>
-                                    지방 고용 노동 관서장이 300인 이하<br />
+                                    지방 고용 노동 관서장이 300인 이하
                                     사업장에 대하여 인정한 경우
                                 </p>
                             </div>
