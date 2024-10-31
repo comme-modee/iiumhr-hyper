@@ -105,6 +105,7 @@
 .sec3 > div > .box > ul > li {
     display: flex;
     gap: 8px;
+    font-size: 1.3rem;
 }
 
 

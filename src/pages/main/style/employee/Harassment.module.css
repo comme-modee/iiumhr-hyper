@@ -145,7 +145,7 @@
 }
 .sec4 > .contentContainer > .text > div > .description {
     font-family: var(--font-R);
-    font-size: 1.3rem;
+    font-size: 1.15rem;
 }
 .sec4 > .contentContainer > .text > div > ul > li > p:nth-child(2) {
     padding-left: 24px;
