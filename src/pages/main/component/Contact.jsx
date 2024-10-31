@@ -3,7 +3,6 @@ import commonStyles from '../style/Common.module.css'
 import styles from '../style/Contact.module.css'
 import classNames from 'classnames';
 import { contactApi } from '@/common/api';
-import { useNotificationContext } from '@/common/context';
 import { motion } from 'framer-motion';
 import PrivacyPolicy from './PrivacyPolicy';
 import { useLocation } from 'react-router-dom';
@@ -13,7 +12,6 @@ const Contact = ({ type, isOpenPrivacyPolicy, setIsOpenPrivacyPolicy }) => {
 
     const isBusiness = type === 'business';
     const isEmployee = type === 'employee';
-    const { showNotification } = useNotificationContext();
     const isFullpagePath = location.pathname === '/business' || location.pathname === '/employee';
     
     const inquiry = async (e) => {
@@ -22,8 +20,7 @@ const Contact = ({ type, isOpenPrivacyPolicy, setIsOpenPrivacyPolicy }) => {
         const privacyCheckbox = e.target.elements['privacy-consent'];
 
         if (!privacyCheckbox.checked) {
-            console.log('체크안됨')
-            showNotification({message: '개인정보 수집에 동의해야 합니다.', type: 'error'})
+            alert('개인정보 수집에 동의해야 합니다.');
             return;
         }
 
@@ -34,12 +31,18 @@ const Contact = ({ type, isOpenPrivacyPolicy, setIsOpenPrivacyPolicy }) => {
                 local: e.target.address.value,
                 content: e.target.content.value
             });
-            console.log(res)
+            
             if(res) {
-				showNotification({message: '상담 예약이 완료되었습니다.', type: 'success'})
+				alert('상담 예약이 완료되었습니다.');
+                
+                e.target.name.value = '';
+                e.target.tel.value = '';
+                e.target.address.value = '';
+                e.target.content.value = '';
+                e.target.elements['privacy-consent'].checked = false;
             }
         } catch (error) {
-			showNotification({message: '상담 예약이 실패하였습니다. 다시 시도해주세요.', type: 'error'})
+			alert('상담 예약이 실패하였습니다. 다시 시도해주세요.');
         }
     }    
 
